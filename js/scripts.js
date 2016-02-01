@@ -4,10 +4,9 @@ function Workout(){
 }
 
 Workout.prototype.exercisePusher = function(Exercise){
-  var test = this.chosenExercises.push(Exercise);
-  return test;
+  var pushedExercise = this.chosenExercises.push(Exercise);
+  return pushedExercise;
 }
-
 
 function Exercise(nameExercise, descriptionExercise, bodyPart){
   this.nameExercise = nameExercise;
