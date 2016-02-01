@@ -10,6 +10,16 @@
   text-shadow: 3px 3px #2B366E;
 }
 
+.jumbotronBottom {
+  background-color: #000;
+  color: #fff;
+  /*padding: 20px;*/
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+
 .inputWidth {
   width: 400px;
   padding-left: 30px;
