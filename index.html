@@ -18,9 +18,11 @@
        " aria-hidden="true"></span></h1>
     </div>
     <div class ="row">
-      <div class="col-md-6">
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
         <div class="inputWidth">
-          <h3>Enter your information to retrieve a workout</h3>
+          <h4>Enter your information to retrieve a workout!</h4>
           <form id="workoutGenerator">
             <label for="nameChoice">Your name:</label>
             <input type="text" class="form-control" placeholder="Your Name" id="userName">
@@ -48,7 +50,8 @@
               </div>
               <div class="form-group">
                 <label for="levelChoice">Difficulty level:</label><br>
-                  <input type="radio" id="beginner" value="beginner"><span id="beginnerLeftSpacer"></span>  Beginner<span id="beginnerRightSpacer"></span></label>
+                <label class="radio-inline">
+                  <input type="radio" id="beginner" value="beginner">Beginner<span id="beginnerRightSpacer"></span></label>
                 <label class="radio-inline">
                   <input type="radio" id="intermediate" value="intermediate">Intermediate<span id="rightSpacer"></span></label></label>
                 <label class="radio-inline">
@@ -64,9 +67,11 @@
                     <option value ="resistance-band">Resistance band</option>
                   </select>
               </div>
-              <button type="submit" class="btn btn-success">Get my workout!</button>
+              <button type="submit" class="btn btn-custom center-block">Get my workout!</button>
           </form>
         </div>
+      </div>
+      <div class="col-md-4">
       </div>
     </div>
 
