@@ -3,7 +3,6 @@ describe("Exercises", function() {
     var testExercise = new Exercise("Chair");
     expect(testExercise.exerciseChooser()).to.equal("Chair step-up");
   });
-
   it("will input the user's regimen choice and reveal the exercise description", function() {
     var newWorkout = new newExercise("Standard Push-up");
     expect(newWorkout.?????()).to.eql(["Places arms below shoulders in plank position, lower your body, keeping core engaged and body in a straight line, push back up to plank"]);
@@ -11,7 +10,6 @@ describe("Exercises", function() {
 });
 
 describe("Workout", function() {
-
   it("will input the user's name and greet them with said name", function() {
     var newWorkout = new Workout("Torrence");
     expect(newWorkout.userName).to.equal("Torrence");
@@ -22,7 +20,7 @@ describe("Workout", function() {
     expect(newWorkout.????()).to.equal(5);
   });
   it("will input level of difficulty and output a matching regimen", function() {
-    var newWorkout = new Workout("advanced");
+    var newWorkout = new Workout("Advanced");
     expect(newWorkout.????()).to.eql(["Triceps dip", "Push-up and rotation", "Side plank"]);
   });
 
@@ -30,7 +28,4 @@ describe("Workout", function() {
     var newWorkout = new Workout("Core");
     expect(newWorkout.?????()).to.eql(["Chair step-up", "Squat", "Tree Pose"]);
   });
-
-
-
 });

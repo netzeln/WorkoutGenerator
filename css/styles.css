@@ -1,0 +1,36 @@
+.jumbotron {
+  background-color: #5B72E8;
+  color: #fff;
+  padding: 35px;
+}
+
+.jumbotron h1 {
+  font-size: 128px;
+  font-family: 'Satisfy', cursive;
+  text-shadow: 3px 3px #2B366E;
+}
+
+.inputWidth {
+  width: 400px;
+  padding-left: 30px;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-bottom: 20px;
+}
+
+#beginnerLeftSpacer {
+  margin-left: 5px;
+}
+
+#beginnerRightSpacer {
+  margin-right: 20px;
+}
+
+#rightSpacer {
+  margin-right: 10px;
+}
