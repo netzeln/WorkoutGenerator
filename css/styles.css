@@ -10,6 +10,35 @@
   text-shadow: 3px 3px #2B366E;
 }
 
+.gymCard {
+  background-color: #ffffe5;
+  box-shadow: 3px 3px #000;
+  border-radius: 10px;
+  height: 150px;
+  width: 250px;
+  text-align: left;
+  padding: 20px;
+  border-bottom-style: double;
+  border-width: 26px;
+  border-color: #1DA883;
+}
+
+.gymCard h3 {
+  font-family: 'Satisfy', cursive;
+  margin-top: 5px;
+}
+
+.memberInfo {
+  text-align: left;
+  float: right;
+}
+
+.glyphicon-user {
+  font-size: 24px;
+  color: #666666;
+  float: left;
+}
+
 .jumbotronBottom {
   background-color: #000;
   color: #fff;
