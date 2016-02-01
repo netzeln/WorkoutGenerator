@@ -7,8 +7,6 @@ function Exercise(nameExercise, descriptionExercise, bodyPart){
 
 
 // Exercise.prototype.categorize = function(){
-
-
 // This is our " pseudo- 'Database' of Exercises."
 var pushUpStandard = new Exercise ("Standard Pushup", "Place arms below shoulders in plank postition, lower your body, keeping core engaged and body in a straight line, push back up to plank", "UpperBody");
 
@@ -29,16 +27,20 @@ var jumpingJackStandard = new Exercise ("Standard Jumping Jack", "Do a Jumping J
 var squatSplit = new Exercise ("Split Squat", ".....description.....", "Lower Body");
 
 var pushUpWide = new Exercise ("Wide Push Up", "Place arms in line with shoulders, slightly wider than shoulder width apart, do a pushup", "Upper Body")
-);
+;
 
-var upperBody =[standardPushUp, plankUpdown, pushUpWide];
-var lowerBody =[squatStandard, squatSplit, highKneeStandard];
+var restTime = new Exercise ("10 Seconds of Rest", "Stop what you're doing", "none");
+
+var upperBody = [standardPushUp, plankUpdown, pushUpWide];
+var lowerBody = [squatStandard, squatSplit, highKneeStandard];
 var core = [plankStandard, plankElbow,];
 var cardio = [highKneeFast, jumpingJackStandard,];
 
 
-// $(document).ready(function() {
-//
-//
-//
-// });
+
+
+$(document).ready(function() {
+
+
+
+});
