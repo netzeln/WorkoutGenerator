@@ -1,7 +1,13 @@
 //Exercise Object Constructor
-function Workout(chosenExercise){
-  this.chosenExercise = [];
+function Workout(){
+  this.chosenExercises = [];
 }
+
+Workout.prototype.exercisePusher = function(Exercise){
+  var test = this.chosenExercises.push(Exercise);
+  return test;
+}
+
 
 function Exercise(nameExercise, descriptionExercise, bodyPart){
   this.nameExercise = nameExercise;
@@ -10,7 +16,6 @@ function Exercise(nameExercise, descriptionExercise, bodyPart){
 }
 
 
-// Exercise.prototype.categorize = function(){
 // This is our " pseudo- 'Database' of Exercises."
 var pushUpStandard = new Exercise ("Standard Pushup", "Place arms below shoulders in plank postition, lower your body, keeping core engaged and body in a straight line, push back up to plank", "Upper Body");
 
