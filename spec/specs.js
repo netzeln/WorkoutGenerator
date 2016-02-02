@@ -7,25 +7,18 @@ describe('Exercise', function(){
   });
 });
 
-
-
 describe("Workout", function() {
   it("will create an object constructor for Workout", function(){
     var testWorkout = new Workout ("[]");
     expect(testWorkout.chosenExercises).to.eql([]);
   });
 
-  it("will push an exercise object into the chosenExercises array", function(){
+  it("will randomly select exercise from different categories and push to array for user display", function(){
     var testWorkout = new Workout();
     var testExercise = new Exercise("kick")
     testWorkout.exercisePusher(testExercise);
-    expect(testWorkout.chosenExercises).to.eql([testExercise]);
+    expect(testWorkout.chosenExercises).to.be.an('array');
   });
-
-  it("will select an exercise from an array to push into the chosenExercises array", function(){
-
-    expect(exerciseGetter()).to.be.an("object");
-  })
 });
 
   // it("will input the available time and equipment and output an exercise", function() {
