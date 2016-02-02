@@ -46,9 +46,10 @@ $(document).ready(function() {
   var seconds = ["20 seconds", "10 seconds"];
 
 
-  // for (var i=0; i < core.length; i++) {
-  //   $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapseExample'>" + core[i] + "</li>");
-  // }
+  for (var i=0; i < core.length; i++) {
+    $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse'" + i +
+    ">" + core[i] + "<div class='collapse' id='collapse'" + i + ">" + "test" + "</div>" + "</li>");
+  }
 
   $(".btn-primary").click(function() {
       $(".collapse").collapse('toggle');
