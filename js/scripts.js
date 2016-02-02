@@ -14,11 +14,14 @@
 
 
 $(document).ready(function() {
-  var core = ["plankStandard", "plankElbow", "restTime"];
+  var core = ["plankStandard", "plankElbow", "restTime", "plankStandard", "plankElbow", "restTime", "plankStandard", "plankElbow", "restTime"];
+  var seconds = ["20 seconds", "10 seconds"];
 
-  for (i=0; i < core.length; i++) {
+
+  for (var i=0; i < core.length; i++) {
     $(".list").append("<li>" + core[i] + "</li>");
   }
+
 
   $("form#workoutGenerator").submit(function(event) {
     event.preventDefault();
