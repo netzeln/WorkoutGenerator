@@ -74,7 +74,7 @@ $(document).ready(function() {
 
 
   for (var i=0; i < newWorkoutList.length; i++) {
-    $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + i +"'>" + newWorkoutList[i].bodyPart + "<div class='collapse' id='collapse" + i + "'>" + "test" + "</div>" + "</li>");
+    $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + i +"'>" + newWorkoutList[i].nameExercise + "<div class='collapse' id='collapse" + i + "'>" + newWorkoutList[i].descriptionExercise + "</div>" + "</li>");
     console.log(i);
   }
   $(".btn-primary").click(function() {
