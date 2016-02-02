@@ -4,10 +4,12 @@ function Workout(){
 }
 
 var exerciseGetter = function(){
-  var selectedExercise = upperBody[0];
+  var selectedExercise = upperBody[Math.floor(Math.random()*upperBody.length)];
   console.log(selectedExercise);
   return selectedExercise;
+  //Notes: try to add loop with "i" replacing "upperBody"
 }
+//NOTES: try to add the exercise Getter directly in this prototype
 
 Workout.prototype.exercisePusher = function(selectedExercise){
   var pushedExercise = this.chosenExercises.push(selectedExercise);
