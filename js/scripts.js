@@ -45,10 +45,20 @@ var restTime = new Exercise ("10 Seconds of Rest", "Stop what you're doing", "no
 
 var lineJump = new Exercise ("Line Jumps", "Jump across a line and back, keep feet together", "Cardio");
 
-var upperBody = [pushUpStandard, plankUpdown, pushUpWide];
-var lowerBody = [squatStandard, squatSplit, highKneeStandard];
-var core = [plankStandard, plankElbow,];
-var cardio = [highKneeFast, jumpingJackStandard, lineJump];
+var crunchesStandard = new Exercise ("Standard Crunches", "Do a sit-up", "Core");
+
+var tricepDips= new Exercise ("Tricep Dips", "Facing the ceiling, hands and feet flat on the ground (as if you were about to do a crab walk), extend one leg straight up into the air and dip by bending at the elbows. Alternate which leg is extended with each dip.", "Upper Body");
+
+var wallSit = new Exercise ("Wall Sit", "Who needs a chair when there’s a wall? Slowly slide your back down a wall until the thighs are parallel to the ground. Make sure the knees are directly above the ankles and keep the back straight. Go for 60 seconds per set (or however long it takes to turn those legs to jelly). Need more fire? Add some bicep curls.", "Lower Body");
+
+var superman = new Exercise ("Superman", "Want some superpowers? Lie face down with arms and legs extended. Keeping the torso as still as possible, simultaneously raise the arms and legs to form a small curve in the body. Cape optional.", "Core");
+
+var  burpees= new Exercise ("Burpees", "One of the most effective full-body exercises around, this one starts out in a low squat position with hands on the floor. Next, kick the feet back to a push-up position, complete one push-up, then immediately return the feet to the squat position. Leap up as high as possible before squatting and moving back into the push-up portion of the show.", "Cardio");
+
+var upperBody = [pushUpStandard, plankUpdown, pushUpWide, tricepDips];
+var lowerBody = [squatStandard, squatSplit, highKneeStandard, wallSit];
+var core = [plankStandard, plankElbow, crunchesStandard, superman];
+var cardio = [highKneeFast, jumpingJackStandard, lineJump, burpees];
 var exerciseCategories = [upperBody, cardio, lowerBody, core, cardio];
 
 
