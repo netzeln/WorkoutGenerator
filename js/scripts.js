@@ -64,7 +64,24 @@ var exerciseCategories = [upperBody, cardio, lowerBody, core, cardio];
 
 
 $(document).ready(function() {
+  var core = ["plankStandard", "plankElbow", "restTime", "plankStandard", "plankElbow", "restTime", "plankStandard", "plankElbow", "restTime"];
+  var seconds = ["20 seconds", "10 seconds"];
 
 
+  for (var i=0; i < core.length; i++) {
+    debugger;
+    $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + i +"'>" + core[i] + "<div class='collapse' id='collapse" + i + "'>" + "test" + "</div>" + "</li>");
+    console.log(i);
+  }
 
+  $(".btn-primary").click(function() {
+      $(".collapse").collapse('toggle');
+  });
+
+  $("form#workoutGenerator").submit(function(event) {
+    event.preventDefault();
+    $(".formBox").fadeOut(1000);
+      $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
+      $(".col-md-8").text("hey whats up we are the best coders in the entire world, this is so fun, it's better than laying in bed eating pizza with the cat");
+  });
 });
