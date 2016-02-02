@@ -73,22 +73,32 @@ $(document).ready(function() {
   }
 
   $("form#workoutGenerator").submit(function(event) {
-    event.preventDefault();
+
 
     var nameInput = $("input#userName").val();
     var timeInput = $(this).find("select.time-choice").val();
     var muscleInput = $(this).find("select.focus-choice").val();
     var difficultyInput;
-    var beginnerInput = document.getElementById("beginner").val();
-    var intermediateInput = document.getElementById("intermediate").val();
-    var advancedInput = document.getElementById("advanced").val();
-    var equipmentInput = $(this).find("select.equip-choice").val();
-    // console.log(label.radio-inline);
-                    console.log(difficultyInput);
+    var beginnerInput = $("#beginner").prop('checked');
+    var intermediateInput = $("#intermediate").prop('checked');
+    var advancedInput = $("#advanced").prop('checked');
+    var chairInput = $("#chair").prop('checked');
+    var weightsInput = $("#weights").prop('checked');
+    var resistanceInput = $("#resistanceBand").prop('checked');
 
+    if (beginnerInput === true) {
+      var difficultyInput = "beginner";
+      console.log(difficultyInput);
+    } else if (intermediateInput === true) {
+      var difficultyInput = "intermediate";
+    } else {
+      var difficultyInput = "advanced";
+    }
 
     $(".formBox").fadeOut(1000);
-      $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
-      $(".col-md-8").text("hey whats up we are the best coders in the entire world, this is so fun, it's better than laying in bed eating pizza with the cat");
+      // $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
+      // $(".col-md-8").text("hey whats up we are the best coders in the entire world, this is so fun, it's better than laying in bed eating pizza with the cat");
+
+    event.preventDefault();
   });
 });
