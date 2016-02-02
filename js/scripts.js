@@ -3,8 +3,14 @@ function Workout(){
   this.chosenExercises = [];
 }
 
-Workout.prototype.exercisePusher = function(Exercise){
-  var pushedExercise = this.chosenExercises.push(Exercise);
+var exerciseGetter = function(){
+  var selectedExercise = upperBody[0];
+  console.log(selectedExercise);
+  return selectedExercise;
+}
+
+Workout.prototype.exercisePusher = function(selectedExercise){
+  var pushedExercise = this.chosenExercises.push(selectedExercise);
   return pushedExercise;
 }
 

@@ -8,6 +8,7 @@ describe('Exercise', function(){
 });
 
 
+
 describe("Workout", function() {
   it("will create an object constructor for Workout", function(){
     var testWorkout = new Workout ("[]");
@@ -16,10 +17,15 @@ describe("Workout", function() {
 
   it("will push an exercise object into the chosenExercises array", function(){
     var testWorkout = new Workout();
-    var testExercise = new Exercise("kick");
+    var testExercise = new Exercise("kick")
     testWorkout.exercisePusher(testExercise);
     expect(testWorkout.chosenExercises).to.eql([testExercise]);
   });
+
+  it("will select an exercise from an array to push into the chosenExercises array", function(){
+
+    expect(exerciseGetter()).to.be.an("object");
+  })
 });
 
   // it("will input the available time and equipment and output an exercise", function() {
