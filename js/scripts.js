@@ -53,7 +53,7 @@ var wallSit = new Exercise ("Wall Sit", "Who needs a chair when there’s a wall
 
 var superman = new Exercise ("Superman", "Want some superpowers? Lie face down with arms and legs extended. Keeping the torso as still as possible, simultaneously raise the arms and legs to form a small curve in the body. Cape optional.", "Core");
 
-var  burpees= new Exercise ("Burpees", "One of the most effective full-body exercises around, this one starts out in a low squat position with hands on the floor. Next, kick the feet back to a push-up position, complete one push-up, then immediately return the feet to the squat position. Leap up as high as possible before squatting and moving back into the push-up portion of the show.", "Cardio");
+var burpees= new Exercise ("Burpees", "One of the most effective full-body exercises around, this one starts out in a low squat position with hands on the floor. Next, kick the feet back to a push-up position, complete one push-up, then immediately return the feet to the squat position. Leap up as high as possible before squatting and moving back into the push-up portion of the show.", "Cardio");
 
 var upperBody = [pushUpStandard, plankUpdown, pushUpWide, tricepDips];
 var lowerBody = [squatStandard, squatSplit, highKneeStandard, wallSit];
