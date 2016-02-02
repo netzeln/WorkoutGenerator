@@ -95,9 +95,24 @@ $(document).ready(function() {
       var difficultyInput = "advanced";
     }
 
+    var equipmentInput = [];
+   $.each($("input[name='equip']:checked"), function() {
+     equipmentInput.push($(this).val());
+   });
+
+   console.log(equipmentInput);
+
+    if (chair)
     $(".formBox").fadeOut(1000);
       // $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
       // $(".col-md-8").text("hey whats up we are the best coders in the entire world, this is so fun, it's better than laying in bed eating pizza with the cat");
+
+      $(".gymCard").show();
+      $(".user-name").text(nameInput);
+      $(".user-minutes").text(timeInput);
+      $(".user-difficulty").text(difficultyInput);
+      $(".user-focus").text(muscleInput);
+      // $(".user-equipment").text();
 
     event.preventDefault();
   });
