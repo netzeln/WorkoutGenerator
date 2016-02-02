@@ -5,12 +5,29 @@ function Workout(){
 
 Workout.prototype.exercisePusher = function(){
   var selectedExercises = [];
-
+  if(muscleInput === "upper-body"){
+    upperBodyFocus.forEach(function(category){
+      selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
+    });
+  } else if(muscleInput === "lower-body"){
+    lowerBodyFocus.forEach(function(category){
+      selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
+    });
+  } else if(muscleInput === "core"){
+    coreFocus.forEach(function(category){
+      selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
+    });
+  } else if(muscleInput === "cardio"){
+    cardioFocus.forEach(function(category){
+      selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
+    });
+  } else {
   exerciseCategories.forEach(function(category){
     selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
   });
-  this.chosenExercises = selectedExercises;
-  return this.chosenExercises;
+}
+this.chosenExercises = selectedExercises;
+return this.chosenExercises;
 }
 
 function Exercise(nameExercise, descriptionExercise, bodyPart){
@@ -60,11 +77,30 @@ var lowerBody = [squatStandard, squatSplit, highKneeStandard, wallSit];
 var core = [plankStandard, plankElbow, crunchesStandard, superman];
 var cardio = [highKneeFast, jumpingJackStandard, lineJump, burpees];
 var exerciseCategories = [upperBody, cardio, lowerBody, core, cardio];
+var upperBodyFocus = [upperBody, cardio, upperBody, cardio, upperBody];
+var lowerBodyFocus = [lowerBody, cardio, lowerBody, cardio, lowerBody];
+var coreFocus = [core, cardio, core, cardio, core];
+var cardioFocus = [cardio, lowerBody, cardio, core, cardio];
 
 
 
 $(document).ready(function() {
+  var core = ["plankStandard", "plankElbow", "restTime", "plankStandard", "plankElbow", "restTime", "plankStandard", "plankElbow", "restTime"];
+  var seconds = ["20 seconds", "10 seconds"];
 
 
+  for (var i=0; i < core.length; i++) {
+    $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + i +"'>" + core[i] + "<div class='collapse' id='collapse" + i + "'>" + "test" + "</div>" + "</li>");
+  }
 
+  $(".btn-primary").click(function() {
+      $(".collapse").collapse('toggle');
+  });
+
+  $("form#workoutGenerator").submit(function(event) {
+    event.preventDefault();
+    $(".formBox").fadeOut(1000);
+      $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
+      $(".col-md-8").text("hey whats up we are the best coders in the entire world, this is so fun, it's better than laying in bed eating pizza with the cat");
+  });
 });
