@@ -2,7 +2,7 @@
 
 #### _{Generates a Interval Workout based on user preferences}, {2-1-2016}_
 
-#### By _**{Nic Netzel, Torrence Stratton, Molly Curtin, Jared ?}**_
+#### By _**{Nic Netzel, Torrence Stratton, Molly Curtin, Jared Beckler}**_
 
 ## Description
 

@@ -3,17 +3,14 @@ function Workout(){
   this.chosenExercises = [];
 }
 
-var exerciseGetter = function(){
-  var selectedExercise = upperBody[Math.floor(Math.random()*upperBody.length)];
-  console.log(selectedExercise);
-  return selectedExercise;
-  //Notes: try to add loop with "i" replacing "upperBody"
-}
-//NOTES: try to add the exercise Getter directly in this prototype
+Workout.prototype.exercisePusher = function(){
+  var selectedExercises = [];
 
-Workout.prototype.exercisePusher = function(selectedExercise){
-  var pushedExercise = this.chosenExercises.push(selectedExercise);
-  return pushedExercise;
+  exerciseCategories.forEach(function(category){
+    selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
+  });
+  this.chosenExercises = selectedExercises;
+  return this.chosenExercises;
 }
 
 function Exercise(nameExercise, descriptionExercise, bodyPart){
@@ -46,11 +43,13 @@ var pushUpWide = new Exercise ("Wide Push Up", "Place arms in line with shoulder
 
 var restTime = new Exercise ("10 Seconds of Rest", "Stop what you're doing", "none");
 
+var lineJump = new Exercise ("Line Jumps", "Jump across a line and back, keep feet together", "Cardio");
+
 var upperBody = [pushUpStandard, plankUpdown, pushUpWide];
 var lowerBody = [squatStandard, squatSplit, highKneeStandard];
 var core = [plankStandard, plankElbow,];
-var cardio = [highKneeFast, jumpingJackStandard,];
-var exerciseCategories = [upperBody, lowerBody, core, cardio];
+var cardio = [highKneeFast, jumpingJackStandard, lineJump];
+var exerciseCategories = [upperBody, cardio, lowerBody, core, cardio];
 
 
 
