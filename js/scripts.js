@@ -68,21 +68,25 @@ $(document).ready(function() {
   var newWorkout = new Workout();
   var newWorkoutList = newWorkout.exercisePusher();
 
-  console.log(newWorkoutList.bodyPart);
-  // var core = ["plankStandard", "plankElbow", "restTime", "plankStandard", "plankElbow", "restTime", "plankStandard", "plankElbow", "restTime"];
-  // var seconds = ["20 seconds", "10 seconds"];
-
-
   for (var i=0; i < newWorkoutList.length; i++) {
     $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + i +"'>" + newWorkoutList[i].nameExercise + "<div class='collapse' id='collapse" + i + "'>" + newWorkoutList[i].descriptionExercise + "</div>" + "</li>");
-    console.log(i);
   }
-  $(".btn-primary").click(function() {
-      $(".collapse").collapse('toggle');
-  });
 
   $("form#workoutGenerator").submit(function(event) {
     event.preventDefault();
+
+    var nameInput = $("input#userName").val();
+    var timeInput = $(this).find("select.time-choice").val();
+    var muscleInput = $(this).find("select.focus-choice").val();
+    var difficultyInput;
+    var beginnerInput = document.getElementById("beginner").val();
+    var intermediateInput = document.getElementById("intermediate").val();
+    var advancedInput = document.getElementById("advanced").val();
+    var equipmentInput = $(this).find("select.equip-choice").val();
+    // console.log(label.radio-inline);
+                    console.log(difficultyInput);
+
+
     $(".formBox").fadeOut(1000);
       $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
       $(".col-md-8").text("hey whats up we are the best coders in the entire world, this is so fun, it's better than laying in bed eating pizza with the cat");
