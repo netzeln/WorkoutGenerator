@@ -78,27 +78,27 @@ $(document).ready(function() {
     var nameInput = $("input#userName").val();
     var timeInput = $(this).find("select.time-choice").val();
     var muscleInput = $(this).find("select.focus-choice").val();
-    var difficultyInput;
-    var beginnerInput = $("#beginner").prop('checked');
-    var intermediateInput = $("#intermediate").prop('checked');
-    var advancedInput = $("#advanced").prop('checked');
-    var chairInput = $("#chair").prop('checked');
-    var weightsInput = $("#weights").prop('checked');
-    var resistanceInput = $("#resistanceBand").prop('checked');
+    // var beginnerInput = $("#beginner").prop('checked');
+    // var intermediateInput = $("#intermediate").prop('checked');
+    // var advancedInput = $("#advanced").prop('checked');
+    // var chairInput = $("#chair").prop('checked');
+    // var weightsInput = $("#weights").prop('checked');
+    // var resistanceInput = $("#resistanceBand").prop('checked');
 
-    if (beginnerInput === true) {
-      var difficultyInput = "beginner";
-      console.log(difficultyInput);
-    } else if (intermediateInput === true) {
-      var difficultyInput = "intermediate";
-    } else {
-      var difficultyInput = "advanced";
-    }
+    var difficultyInput;
+   $.each($("input[name='level']:checked"), function() {
+     difficultyInput = $(this).val();
+     console.log(difficultyInput);
+   });
+
+
 
     var equipmentInput = [];
    $.each($("input[name='equip']:checked"), function() {
      equipmentInput.push($(this).val());
    });
+
+
 
    console.log(equipmentInput);
 
