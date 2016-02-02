@@ -117,5 +117,7 @@
   background-image: url("../img/speckle.jpg");
   background-repeat: repeat;
   border-radius: 10px;
-  padding: 40px;
+  padding: 30px;
+  list-style: none;
+  font-size: 16px;
 }
