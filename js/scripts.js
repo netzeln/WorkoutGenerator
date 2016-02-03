@@ -1,44 +1,29 @@
 //Exercise Object Constructor
-function Workout(){
+function Workout(equipmentInput){
   this.chosenExercises = [];
-  this.availableEquipment = ["Weights", "Chair"];
+  this.availableEquipment = ["Weights"];
 }
 
-// Workout.prototype.equipmentCheck = function() {
-//   var equipmentAvailable = this.availableEquipment;
-//   return equipmentAvailable;
-// }
+Workout.prototype.equipmentFilterer = function(){
+  var equipmentAvailable = this.availableEquipment;
+  var equipmentExercisesFiltered = [];
 
+  equipmentAvailable.forEach(function(equipment){
+    equipmentExercises.forEach(function(exercise){
+      if (exercise.neededEquipment === equipment){
+         equipmentExercisesFiltered.push(exercise);
+      }
+    });
+  });
+  return equipmentExercisesFiltered;
+}
 
-// Workout.prototype.equipmentCheck = function(){
-//   var equipmentAvailable = this.availableEquipment;
-//   return equipmentAvailable;
-// }
-//
-// var equipmentFilter = function(equipmentAvailable){
-//   exerciseCategories.forEach(function(category){
-//     category.filter()
-//
-//     })
-//
-//   })
-//
-// }
 
 Workout.prototype.exercisePusher = function(){
-  // var availableGear = this.availableEquipment;
   var selectedExercises = [];
   var muscleInput = "";
-  // var filteredResults = [];
   if(muscleInput === "upper-body"){
     upperBodyFocus.forEach(function(category){
-      // for(i=0; i <= category.length; i++){
-      //   for(j=0; j <= availableGear.length; j++){
-      //     if ((category[i].neededEquipment !== availableGear[j]) || (category[i].neededEquipment !== "none")) {
-      //       filteredResults.push(category[i]);
-      //     }
-      //   }
-      // }
       selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
     });
   } else if(muscleInput === "lower-body"){
@@ -125,10 +110,12 @@ var hammerCurl = new Exercise ("Hammer Curl", "Stand with the feet shoulder widt
 
 var russianTwist = new Exercise ("Russian Twist", "Sit on the floor with your feet in the air and knees bent, holding a dumbbell in both hands in front of your sternum. Keeping your core braced and arms straight, rotate to one side. Then twist the other way. Return to the start again to complete one rep.", "Core", "Weights");
 
-var upperBody = [pushUpStandard, plankUpdown, pushUpWide, tricepDips, pushUpIncline, hammerCurl];
-var lowerBody = [squatStandard, squatSplit, highKneeStandard, wallSit, squatFront, lateralBandWalk];
-var core = [plankStandard, plankElbow, crunchesStandard, superman, seatedKneeLifts, russianTwist];
-var cardio = [highKneeFast, jumpingJackStandard, lineJump, burpees, seatTaps];
+var equipmentExercises = [pushUpIncline, hammerCurl, squatFront, lateralBandWalk,  seatedKneeLifts, russianTwist, seatTaps];
+
+var upperBody = [pushUpStandard, plankUpdown, pushUpWide, tricepDips,];
+var lowerBody = [squatStandard, squatSplit, highKneeStandard, wallSit,];
+var core = [plankStandard, plankElbow, crunchesStandard, superman,];
+var cardio = [highKneeFast, jumpingJackStandard, lineJump, burpees,];
 
 var exerciseCategories = [upperBody, cardio, lowerBody, core, cardio];
 var upperBodyFocus = [upperBody, cardio, upperBody, cardio, upperBody];

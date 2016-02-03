@@ -19,6 +19,14 @@ describe("Workout", function() {
     testWorkout.exercisePusher(testExercise);
     expect(testWorkout.chosenExercises).to.be.an('array');
   });
+
+  it("will push exercises based on equipment needed/available", function(){
+    var testWorkout = new Workout();
+    var testExercise = new Exercise("Test Exercise", "Description", "Cardio", "Equipment");
+    var equipmentExercisesFiltered = [];
+    testWorkout.equipmentFilterer(testExercise);
+    expect(equipmentExercisesFiltered).to.be.an('array');
+  });
 });
 
   // it("will input the available time and equipment and output an exercise", function() {
