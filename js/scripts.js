@@ -1,7 +1,8 @@
 //Exercise Object Constructor
-function Workout(equipmentInput){
+function Workout(equipmentInput, muscleInput){
   this.chosenExercises = [];
-  this.availableEquipment = ["Weights"];
+  this.availableEquipment = [];
+  this.muscleInput = muscleInput;
 }
 
 Workout.prototype.equipmentFilterer = function(){
@@ -15,26 +16,37 @@ Workout.prototype.equipmentFilterer = function(){
       }
     });
   });
-  return equipmentExercisesFiltered;
+  
+  equipmentExercisesFiltered.forEach(function(filteredExercise){
+    if(filteredExercise.bodyPart === "Upper Body"){
+      upperBody.push(filteredExercise);
+    }else if(filteredExercise.bodyPart === "Lower Body"){
+      lowerBody.push(filteredExercise);
+    }else if(filteredExercise.bodyPart === "Core"){
+      core.push(filteredExercise);
+    }else {
+      cardio.push(filteredExercise)
+    }
+  });
 }
 
 
 Workout.prototype.exercisePusher = function(){
   var selectedExercises = [];
-  var muscleInput = "";
-  if(muscleInput === "upper-body"){
+  var focusInput = this.muscleInput;
+  if(focusInput === "upper-body"){
     upperBodyFocus.forEach(function(category){
       selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
     });
-  } else if(muscleInput === "lower-body"){
+  } else if(focusInput === "lower-body"){
     lowerBodyFocus.forEach(function(category){
       selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
     });
-  } else if(muscleInput === "core"){
+  } else if(focusInput === "core"){
     coreFocus.forEach(function(category){
       selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
     });
-  } else if(muscleInput === "cardio"){
+  } else if(focusInput === "cardio"){
     cardioFocus.forEach(function(category){
       selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
     });
