@@ -139,30 +139,67 @@ var cardioFocus = [cardio, lowerBody, cardio, core, cardio];
 
 
 $(document).ready(function() {
-  var core = ["plankStandard", "plankElbow", "restTime", "plankStandard", "plankElbow", "restTime", "plankStandard", "plankElbow", "restTime"];
-  var seconds = ["20 seconds", "10 seconds"];
+  var newExercise = new Exercise();
+  var newWorkout = new Workout();
+  var newWorkoutList = newWorkout.exercisePusher();
 
 
-  for (var i=0; i < core.length; i++) {
-    $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + i +"'>" + core[i] + "<div class='collapse' id='collapse" + i + "'>" + "test" + "</div>" + "</li>");
+  for (var i=0; i < newWorkoutList.length; i++) {
+    $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + i +"'>" + newWorkoutList[i].nameExercise + "<div class='collapse' id='collapse" + i + "'>" + newWorkoutList[i].descriptionExercise + "</div>" + "</li>");
   }
 
-
-  for (var i=0; i < core.length; i++) {
-    debugger;
-    $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + i +"'>" + core[i] + "<div class='collapse' id='collapse" + i + "'>" + "test" + "</div>" + "</li>");
-    console.log(i);
-  }
-
-  $(".btn-primary").click(function() {
-      $(".collapse").collapse('toggle');
-  });
 
 
   $("form#workoutGenerator").submit(function(event) {
-    event.preventDefault();
-    $(".formBox").fadeOut(1000);
+
+
+    var nameInput = $("input#userName").val();
+    var timeInput = $(this).find("select.time-choice").val();
+    var muscleInput = $(this).find("select.focus-choice").val();
+    // var beginnerInput = $("#beginner").prop('checked');
+    // var intermediateInput = $("#intermediate").prop('checked');
+    // var advancedInput = $("#advanced").prop('checked');
+    // var chairInput = $("#chair").prop('checked');
+    // var weightsInput = $("#weights").prop('checked');
+    // var resistanceInput = $("#resistanceBand").prop('checked');
+
+    var difficultyInput;
+   $.each($("input[name='level']:checked"), function() {
+     difficultyInput = $(this).val();
+     console.log(difficultyInput);
+   });
+
+
+
+    var equipmentInput = [];
+   $.each($("input[name='equip']:checked"), function() {
+     equipmentInput.push($(this).val());
+   });
+
+
+      $(".formBox").fadeOut(5000);
+      $(".list").show();
       $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
       $(".col-md-8").text("hey whats up we are the best coders in the entire world, this is so fun, it's better than laying in bed eating pizza with the cat");
+
+
+      var equipString = equipmentInput.join(", ");
+
+
+
+        if ($(window).width() < 401) {
+          $(".gymCard").hide();
+        } else {
+          $(".gymCard").show();
+          $(".jumbotron h1").css('padding-right','250px');
+        }
+
+      $(".user-name").text(nameInput);
+      $(".user-minutes").text(timeInput + "min, ");
+      $(".user-difficulty").text(difficultyInput);
+      $(".user-focus").text(muscleInput);
+      $(".user-equipment").text(equipString);
+
+    event.preventDefault();
   });
 });

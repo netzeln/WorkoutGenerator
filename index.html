@@ -15,9 +15,10 @@
       <div class="jumbotron">
         <div class="gymCard"><span class="glyphicon glyphicon-user
           " aria-hidden="true"></span>
-          <div class="memberInfo"><h3>Molly Curtin</h3>
-          <p>20 minutes, Beginner</p>
-          <p>Core, Chair, Mat, Weights</p>
+          <div class="memberInfo"><h3><span class="user-name"></span></h3>
+          <p><span class="user-minutes"></span><span class="user-difficulty"></span></p>
+          <p><span class="user-focus"></span></p>
+          <p><span class="user-equipment"></span></p>
         </div>
         </div>
         <h1 class="text-center">Microfit</h1>
@@ -46,17 +47,18 @@
                   <label for="timeChoice">Amount of time:</label>
                     <select class="form-control time-choice">
                       <option></option>
-                      <option value ="5Minutes">5 minutes</option>
-                      <option value ="10Minutes">10 minutes</option>
-                      <option value ="15Minutes">15 minutes</option>
-                      <option value ="20Minutes">20 minutes</option>
-                      <option value ="25Minutes">25 minutes</option>
-                      <option value ="30Minutes">30 minutes</option>
+                      <option value ="5">5 minutes</option>
+                      <option value ="10">10 minutes</option>
+                      <option value ="15">15 minutes</option>
+                      <option value ="20">20 minutes</option>
+                      <option value ="25">25 minutes</option>
+                      <option value ="30">30 minutes</option>
                     </select>
                 </div>
                 <div class="form-group">
                   <label for="focusChoice">Target muscle group:</label>
                     <select class="form-control focus-choice">
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <option value ="no-focus" selected>Total Body Workout</option>
 =======
@@ -66,27 +68,42 @@
                       <option value ="lower-body">Lower-body</option>
                       <option value ="core">Core</option>
                       <option value ="cardio">Heart (Cardio)</option>
+=======
+                      <option value ="Total Body">Total Body</option>
+                      <option value ="Upper Body">Upper-body</option>
+                      <option value ="Lower Body">Lower-body</option>
+                      <option value ="Core">Core</option>
+                      <option value ="Cardio">Heart (Cardio)</option>
+>>>>>>> 2017879b802db0123bf5a72535425b8cfb580087
                     </select>
                 </div>
                 <div class="form-group">
                   <label for="levelChoice">Difficulty level:</label><br>
                   <label class="radio-inline">
-                    <input type="radio" id="beginner" value="beginner">Beginner<span id="beginnerRightSpacer"></span></label>
+                    <input type="radio" id="beginner" name="level" value="Beginner">Beginner<span id="beginnerRightSpacer"></span></label>
                   <label class="radio-inline">
-                    <input type="radio" id="intermediate" value="intermediate">Intermediate<span id="rightSpacer"></span></label></label>
+                    <input type="radio" id="intermediate" name="level" value="Intermediate">Intermediate<span id="rightSpacer"></span></label></label>
                   <label class="radio-inline">
-                    <input type="radio" id="advanced" value="advanced">Advanced<span id="rightSpacer"></span></label></label>
+                    <input type="radio" id="advanced" name="level" value="Advanced">Advanced<span id="rightSpacer"></span></label></label>
                 </div>
                 <div class="form-group">
                   <label for="equipmentChoice">Equipment available:</label>
-                    <select class="form-control focus-choice">
-                      <option></option>
-                      <option value ="chair">Chair</option>
-                      <option value ="mat">Mat</option>
-                      <option value ="weights">Weights</option>
-                      <option value ="resistance-band">Resistance band</option>
-                    </select>
-                </div>
+                      <div class="checkbox">
+                        <label>
+                        <input type="checkbox" id="chair" name="equip" value="chair"> Chair
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                        <input type="checkbox" id="weights" name="equip" value="weights"> Weights
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                        <input type="checkbox" id="resistanceBand" name="equip" value="band"> Resistance band
+                        </label>
+                      </div>
+                    </div>
                 <button type="submit" class="btn btn-custom center-block">Get my workout!</button>
             </form>
           </div>
