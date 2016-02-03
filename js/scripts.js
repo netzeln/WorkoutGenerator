@@ -72,6 +72,7 @@ $(document).ready(function() {
     $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + i +"'>" + newWorkoutList[i].nameExercise + "<div class='collapse' id='collapse" + i + "'>" + newWorkoutList[i].descriptionExercise + "</div>" + "</li>");
   }
 
+
   $("form#workoutGenerator").submit(function(event) {
 
 
@@ -99,20 +100,28 @@ $(document).ready(function() {
    });
 
 
+      $(".formBox").fadeOut(5000);
+      $(".list").show();
+      $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
+      $(".col-md-8").text("hey whats up we are the best coders in the entire world, this is so fun, it's better than laying in bed eating pizza with the cat");
 
-   console.log(equipmentInput);
 
-    if (chair)
-    $(".formBox").fadeOut(1000);
-      // $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
-      // $(".col-md-8").text("hey whats up we are the best coders in the entire world, this is so fun, it's better than laying in bed eating pizza with the cat");
+      var equipString = equipmentInput.join(", ");
 
-      $(".gymCard").show();
+
+
+        if ($(window).width() < 401) {
+          $(".gymCard").hide();
+        } else {
+          $(".gymCard").show();
+          $(".jumbotron h1").css('padding-right','250px');
+        }
+
       $(".user-name").text(nameInput);
-      $(".user-minutes").text(timeInput);
+      $(".user-minutes").text(timeInput + "min, ");
       $(".user-difficulty").text(difficultyInput);
       $(".user-focus").text(muscleInput);
-      // $(".user-equipment").text();
+      $(".user-equipment").text(equipString);
 
     event.preventDefault();
   });

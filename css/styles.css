@@ -23,13 +23,13 @@ body {
   border-radius: 10px;
   height: 150px;
   width: 250px;
-  text-align: left;
   border-bottom-style: double;
   border-width: 35px;
   border-color: #FF523C;
-  /*padding: 20px;
+  padding: 20px;
+  padding-right: 10px;
   float:left;
-  margin-top: 10px;*/
+  margin-top: 10px;
 }
 
 .gymCard p {
@@ -112,15 +112,10 @@ body {
   background-color: #FF523C;
   color: #fff;
 }
-/*
+
 .list {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 30px;
-  list-style: none;
-  font-size: 16px;
-    padding: 10px;
-}*/
+  display: none;
+}
 
 li {
   background-color: #fff;
@@ -129,4 +124,22 @@ li {
   margin-bottom: 10px;
   max-width: 200px;
   list-style-type: none;
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        background-color: lightblue;
+    }
+    .jumbotron h1 {
+      text-align: center;
+      font-size: 96px;
+    }
+    .jumbotron {
+      padding: 30px;
+
+    }
+    .jumbotronBottom {
+      position: absolute;
+      height: 100px;
+    }
 }
