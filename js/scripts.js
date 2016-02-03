@@ -1,7 +1,7 @@
 //Exercise Object Constructor
 function Workout(equipmentInput, muscleInput){
   this.chosenExercises = [];
-  this.availableEquipment = [];
+  this.availableEquipment = equipmentInput;
   this.muscleInput = muscleInput;
 }
 
@@ -16,7 +16,7 @@ Workout.prototype.equipmentFilterer = function(){
       }
     });
   });
-  
+
   equipmentExercisesFiltered.forEach(function(filteredExercise){
     if(filteredExercise.bodyPart === "Upper Body"){
       upperBody.push(filteredExercise);
@@ -138,42 +138,32 @@ var cardioFocus = [cardio, lowerBody, cardio, core, cardio];
 
 
 $(document).ready(function() {
-  var newExercise = new Exercise();
-  var newWorkout = new Workout();
-  var newWorkoutList = newWorkout.exercisePusher();
-
-
-  for (var i=0; i < newWorkoutList.length; i++) {
-    $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + i +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + i + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
-  }
-
-
-
   $("form#workoutGenerator").submit(function(event) {
 
+    var newWorkout = new Workout(equipmentInput, muscleInput);
 
     var nameInput = $("input#userName").val();
     var timeInput = $(this).find("select.time-choice").val();
     var muscleInput = $(this).find("select.focus-choice").val();
+    var difficultyInput;
     // var beginnerInput = $("#beginner").prop('checked');
     // var intermediateInput = $("#intermediate").prop('checked');
     // var advancedInput = $("#advanced").prop('checked');
-    // var chairInput = $("#chair").prop('checked');
-    // var weightsInput = $("#weights").prop('checked');
-    // var resistanceInput = $("#resistanceBand").prop('checked');
-
-    var difficultyInput;
-   $.each($("input[name='level']:checked"), function() {
-     difficultyInput = $(this).val();
-     console.log(difficultyInput);
-   });
 
 
+    $.each($("input[name='level']:checked"), function() {
+      difficultyInput = $(this).val();
+    });
+
+    var newWorkoutList = newWorkout.exercisePusher();
+    for (var i=0; i < newWorkoutList.length; i++) {
+      $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + i +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + i + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
+    }
 
     var equipmentInput = [];
-   $.each($("input[name='equip']:checked"), function() {
-     equipmentInput.push($(this).val());
-   });
+    $.each($("input[name='equip']:checked"), function() {
+      equipmentInput.push($(this).val());
+    });
 
 
       $(".formBox").fadeOut(5000);
@@ -183,8 +173,6 @@ $(document).ready(function() {
 
 
       var equipString = equipmentInput.join(", ");
-
-
 
         if ($(window).width() < 401) {
           $(".gymCard").hide();
