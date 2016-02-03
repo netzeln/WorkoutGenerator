@@ -147,9 +147,17 @@ $(document).ready(function() {
     $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + i +"'>" + core[i] + "<div class='collapse' id='collapse" + i + "'>" + "test" + "</div>" + "</li>");
   }
 
+
+  for (var i=0; i < core.length; i++) {
+    debugger;
+    $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + i +"'>" + core[i] + "<div class='collapse' id='collapse" + i + "'>" + "test" + "</div>" + "</li>");
+    console.log(i);
+  }
+
   $(".btn-primary").click(function() {
       $(".collapse").collapse('toggle');
   });
+
 
   $("form#workoutGenerator").submit(function(event) {
     event.preventDefault();
