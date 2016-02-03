@@ -191,18 +191,16 @@ $(document).ready(function() {
 
     $(".user-name").text(nameInput);
     $(".user-minutes").text(timeInput + "min, ");
-    $(".user-difficulty").text(difficultyInput);
 
     var muscleInputEdit = muscleInput.replace("-"," ");
+    var muscleInputFirstLetter = muscleInputEdit.charAt(0).toUpperCase();
+    var muscleInputSansFirstLetter = muscleInputEdit.slice(1);
+    var finalMuscleInput = muscleInputFirstLetter + muscleInputSansFirstLetter;
 
 
-    var testWord = (muscleInputEdit[0].toUpperCase() + str.slice(1));
-        console.log(testWord);
 
 
-
-
-    $(".user-focus").text(muscleInputEdit);
+    $(".user-focus").text(finalMuscleInput);
     $(".user-equipment").text(equipString);
 
     event.preventDefault();
