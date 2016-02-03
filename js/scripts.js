@@ -35,27 +35,27 @@ Workout.prototype.equipmentFilterer = function(equipmentInput){
 Workout.prototype.exercisePusher = function(){
   var selectedExercises = [];
   var focusInput = this.muscleInput;
-  if(focusInput === "upper-body"){
-    upperBodyFocus.forEach(function(category){
+    if(focusInput === "upper-body"){
+      upperBodyFocus.forEach(function(category){
+        selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
+      });
+    } else if(focusInput === "lower-body"){
+      lowerBodyFocus.forEach(function(category){
+        selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
+      });
+    } else if(focusInput === "core"){
+      coreFocus.forEach(function(category){
+        selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
+      });
+    } else if(focusInput === "cardio"){
+      cardioFocus.forEach(function(category){
+        selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
+      });
+    } else{
+    exerciseCategories.forEach(function(category){
       selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
     });
-  } else if(focusInput === "lower-body"){
-    lowerBodyFocus.forEach(function(category){
-      selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
-    });
-  } else if(focusInput === "core"){
-    coreFocus.forEach(function(category){
-      selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
-    });
-  } else if(focusInput === "cardio"){
-    cardioFocus.forEach(function(category){
-      selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
-    });
-  } else{
-  exerciseCategories.forEach(function(category){
-    selectedExercises.push(category[Math.floor(Math.random()*category.length)]);
-  });
-}
+  }
 this.chosenExercises = selectedExercises;
 return this.chosenExercises;
 }
@@ -157,11 +157,21 @@ $(document).ready(function() {
 
     var newWorkout = new Workout(muscleInput, equipmentInput);
     var newWorkoutFilterer = newWorkout.equipmentFilterer();
-    var newWorkoutList = newWorkout.exercisePusher();
-    for (var i=0; i < newWorkoutList.length; i++) {
-      $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + i +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + i + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
-    }
 
+    var timerCount;
+      if (timeInput < 20 ){
+        timerCount = 1;
+      }else {
+        timerCount =2;
+      }
+
+console.log(timerCount);
+    for (var j = 0 ; j <timerCount;  j++){
+      var newWorkoutList = newWorkout.exercisePusher();
+      for (var i=0; i < newWorkoutList.length; i++) {
+        $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + i +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + i + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
+      }
+    };
 
 
 
