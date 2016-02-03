@@ -1,18 +1,19 @@
 //Exercise Object Constructor
-function Workout(equipmentInput, muscleInput){
+function Workout(muscleInput, equipmentInput){
   this.chosenExercises = [];
   this.availableEquipment = equipmentInput;
   this.muscleInput = muscleInput;
+  console.log(this.availableEquipment);
 }
 
-Workout.prototype.equipmentFilterer = function(){
+Workout.prototype.equipmentFilterer = function(equipmentInput){
   var equipmentAvailable = this.availableEquipment;
   var equipmentExercisesFiltered = [];
 
   equipmentAvailable.forEach(function(equipment){
     equipmentExercises.forEach(function(exercise){
       if (exercise.neededEquipment === equipment){
-         equipmentExercisesFiltered.push(exercise);
+        equipmentExercisesFiltered.push(exercise);
       }
     });
   });
@@ -25,7 +26,7 @@ Workout.prototype.equipmentFilterer = function(){
     }else if(filteredExercise.bodyPart === "Core"){
       core.push(filteredExercise);
     }else {
-      cardio.push(filteredExercise)
+      cardio.push(filteredExercise);
     }
   });
 }
@@ -124,10 +125,10 @@ var russianTwist = new Exercise ("Russian Twist", "Sit on the floor with your fe
 
 var equipmentExercises = [pushUpIncline, hammerCurl, squatFront, lateralBandWalk,  seatedKneeLifts, russianTwist, seatTaps];
 
-var upperBody = [pushUpStandard, plankUpdown, pushUpWide, tricepDips,];
-var lowerBody = [squatStandard, squatSplit, highKneeStandard, wallSit,];
-var core = [plankStandard, plankElbow, crunchesStandard, superman,];
-var cardio = [highKneeFast, jumpingJackStandard, lineJump, burpees,];
+var upperBody = [pushUpStandard, plankUpdown, pushUpWide, tricepDips];
+var lowerBody = [squatStandard, squatSplit, highKneeStandard, wallSit];
+var core = [plankStandard, plankElbow, crunchesStandard, superman];
+var cardio = [highKneeFast, jumpingJackStandard, lineJump, burpees];
 
 var exerciseCategories = [upperBody, cardio, lowerBody, core, cardio];
 var upperBodyFocus = [upperBody, cardio, upperBody, cardio, upperBody];
@@ -140,30 +141,28 @@ var cardioFocus = [cardio, lowerBody, cardio, core, cardio];
 $(document).ready(function() {
   $("form#workoutGenerator").submit(function(event) {
 
-    var newWorkout = new Workout(equipmentInput, muscleInput);
-
     var nameInput = $("input#userName").val();
     var timeInput = $(this).find("select.time-choice").val();
     var muscleInput = $(this).find("select.focus-choice").val();
     var difficultyInput;
-    // var beginnerInput = $("#beginner").prop('checked');
-    // var intermediateInput = $("#intermediate").prop('checked');
-    // var advancedInput = $("#advanced").prop('checked');
-
 
     $.each($("input[name='level']:checked"), function() {
       difficultyInput = $(this).val();
     });
 
+    var equipmentInput = [];
+    $.each($("input[name='equip']:checked"), function() {
+      equipmentInput.push($(this).val());
+    });
+
+    var newWorkout = new Workout(muscleInput, equipmentInput);
+    var newWorkoutFilterer = newWorkout.equipmentFilterer();
     var newWorkoutList = newWorkout.exercisePusher();
     for (var i=0; i < newWorkoutList.length; i++) {
       $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + i +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + i + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
     }
 
-    var equipmentInput = [];
-    $.each($("input[name='equip']:checked"), function() {
-      equipmentInput.push($(this).val());
-    });
+
 
 
       $(".formBox").fadeOut(5000);
