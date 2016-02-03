@@ -10,13 +10,10 @@ body {
 
 .jumbotron h1 {
   font-size: 128px;
-  font-family: 'Satisfy', cursive;
+  font-family: 'Fredoka One', cursive;
   text-shadow: 3px 3px #666666;
 }
 
-.collapse {
-  display: none;
-}
 .gymCard {
   display: none;
   background-color: #fff;
@@ -117,19 +114,64 @@ body {
   display: none;
 }
 
+.list h3 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 26px;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.collapse {
+  display: none;
+}
+
+.clickDesc {
+  font-weight: bold;
+  font-size: 16px;
+  vertical-align: middle;
+  position: relative;
+
+}
+
+.workoutSummary {
+  padding-top: 30px;
+  font-weight: normal;
+  font-size: 14px;
+}
+
 li {
   background-color: #fff;
   border-radius: 24px;
-  padding: 10px;
+  padding: 16px;
   margin-bottom: 10px;
-  max-width: 200px;
+  /*height: 50px;*/
+  max-width: 270px;
   list-style-type: none;
 }
 
+.timeDisplay {
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+  background-color: #FF523C;
+  color: #fff;
+  /*padding: 8px;*/
+  /*padding-left: 7px;
+  padding-right: 7px;*/
+  text-align: center;
+  font-size: 14px;
+  position: absolute;
+  left: 80%;
+  top: 13%;
+  vertical-align: middle;
+}
+
+.timeDisplay p {
+    display: inline-block;
+    margin-top: 27%;
+}
+
 @media only screen and (max-width: 400px) {
-    body {
-        background-color: lightblue;
-    }
     .jumbotron h1 {
       text-align: center;
       font-size: 96px;
