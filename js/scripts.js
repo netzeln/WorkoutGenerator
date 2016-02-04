@@ -167,6 +167,10 @@ $(document).ready(function() {
       }
     };
 
+      $(".clickDesc").click(function() {
+           $(".timeDisplay").css("top", "3%");
+      });
+
 
     // changes page layout on form submission and ideally fades the form out as well
 
