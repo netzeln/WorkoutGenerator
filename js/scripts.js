@@ -102,7 +102,7 @@ var squatStandard = new Exercise("Standard Squat", "Stand with feet shoulder wid
 var highKneeStandard = new Exercise("High Knee", "Alternate raising knees to hip height", "Lower Body", "none");
 
 
-var highKneeFast = new Exercise ("High Knee / Run in Place", "Run in place, raising knees to hip height, swinging arms", "Cardio", "none");
+var highKneeFast = new Exercise ("Fast High Knee", "Run in place, raising knees to hip height, swinging arms", "Cardio", "none");
 
 var plankStandard = new Exercise("Plank", "Place Arms slightly greater than shoulder width apart and toes on the ground. Hold position, keeping legs, torso and head aligned and core engaged", "Core", "none");
 
@@ -211,7 +211,8 @@ $(document).ready(function() {
 
     var count = $(".clickDesc").length;
     if (count === 10) {
-      $(".exerciseList li:nth-child(5n)").after("<p class='listBreak'>" + "Second Set:" + "</p>");
+      $(".exerciseList li:nth-child(5)").after("<p class='listBreak'>" + "Second Set:" + "</p>");
+      $(".container").css("margin-bottom", "200px")
     }
 
       $(".clickDesc").click(function() {
@@ -230,13 +231,16 @@ $(document).ready(function() {
     var equipString = equipmentInput.join(", ");
 
     // removes gymCard on mobile view
+    $(window).on('resize', function() {
+      if ($(window).width() < 401) {
+        $(".gymCard").hide();
+        $(".jumbotron h1").css('padding-right', '0px');
+      } else {
+        $(".gymCard").show();
+        $(".jumbotron h1").css('padding-right', '250px');
+      }
+    }).trigger('resize');
 
-    if ($(window).width() < 401) {
-      $(".gymCard").hide();
-    } else {
-      $(".gymCard").show();
-      $(".jumbotron h1").css('padding-right', '250px');
-    }
 
     // adds user data to gymCard
 
@@ -250,13 +254,6 @@ $(document).ready(function() {
 
     //adds dynamic workout title
     $(".workoutTitle").text(finalMuscleInput + " :");
-
-    if ($(window).width() < 401) {
-      $(".gymCard").hide();
-    } else {
-      $(".gymCard").show();
-      $(".jumbotron h1").css('padding-right', '250px');
-    }
 
     $(".user-focus").text(finalMuscleInput);
     $(".user-equipment").text(equipString);
