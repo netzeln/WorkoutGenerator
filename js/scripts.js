@@ -144,12 +144,6 @@ $(document).ready(function() {
     var nameInput = $("input#userName").val();
     var timeInput = $(this).find("select.time-choice").val();
     var muscleInput = $(this).find("select.focus-choice").val();
-    var difficultyInput;
-
-    $.each($("input[name='level']:checked"), function() {
-      difficultyInput = $(this).val();
-    });
-
     var equipmentInput = [];
     $.each($("input[name='equip']:checked"), function() {
       equipmentInput.push($(this).val());
@@ -165,7 +159,6 @@ $(document).ready(function() {
         timerCount =2;
       }
 
-console.log(timerCount);
     for (var j = 0 ; j <timerCount;  j++){
       var newWorkoutList = newWorkout.exercisePusher();
       for (var i=0; i < newWorkoutList.length; i++) {
@@ -173,12 +166,15 @@ console.log(timerCount);
       }
     };
 
+
     // changes page layout on form submission and ideally fades the form out as well
 
-        $(".formBox").fadeOut(5000);
+      $.when($(".formBox").fadeOut(2000)).then(function() {
         $(".list").show();
         $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
         $(".col-md-8").text("hey whats up we are the best coders in the entire world, this is so fun, it's better than laying in bed eating pizza with the cat");
+      });
+
 
 
     var equipString = equipmentInput.join(", ");
@@ -201,6 +197,10 @@ console.log(timerCount);
     var muscleInputFirstLetter = muscleInputEdit.charAt(0).toUpperCase();
     var muscleInputSansFirstLetter = muscleInputEdit.slice(1);
     var finalMuscleInput = muscleInputFirstLetter + muscleInputSansFirstLetter;
+
+    //adds dynamic workout title
+    console.log(finalMuscleInput);
+    $(".workoutTitle").text(finalMuscleInput + " :");
 
         if ($(window).width() < 401) {
           $(".gymCard").hide();
