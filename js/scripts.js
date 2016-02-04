@@ -3,7 +3,6 @@ function Workout(muscleInput, equipmentInput){
   this.chosenExercises = [];
   this.availableEquipment = equipmentInput;
   this.muscleInput = muscleInput;
-  console.log(this.availableEquipment);
 }
 
 Workout.prototype.equipmentFilterer = function(equipmentInput){
@@ -78,7 +77,7 @@ var squatStandard = new Exercise ("Standard Squat", "Stand with feet shoulder wi
 
 var highKneeStandard = new Exercise ("High Knee", "Alternate raising knees to hip height", "Lower Body", "none");
 
-var highKneeFast = new Exercise ("Fast High Knee / Run in Place", "Run in place, raising knees to hip height, swinging arms", "Cardio", "none");
+var highKneeFast = new Exercise ("High Knee / Run in Place", "Run in place, raising knees to hip height, swinging arms", "Cardio", "none");
 
 var plankStandard = new Exercise ("Plank", "Place Arms slightly greater than shoulder width apart and toes on the ground. Hold position, keeping legs, torso and head aligned and core engaged", "Core", "none");
 
@@ -114,7 +113,7 @@ var seatTaps = new Exercise ("Seat Taps", "Stand facing the front of the chair. 
 var seatedKneeLifts = new Exercise ("Seated Knee Lifts", "Sit on edge of chair, knees bent, feet flat. Grasp sides of chair, lean back slightly. Pull knees toward chest as you crunch upper body forward using abs, not arms. Lower feet almost to floor, but don't let them touch until the end of the set.", "Core", "Chair");
 
     // These exercises require a resistance band
-var squatFront = new Exercise ("Front Squat with Resistance Band", "Stand on band with feet slightly wider than shoulder width. Holding a handle in each hand, bring the top of the band over each shoulder. (If it's too long, secure band in place by crossing your arms at your chest.) Sit straight down, chest up, abs firm, pressing knees out over your toes", "Lower Body", "Resistance Band");
+var squatFront = new Exercise ("Front Squat with Band", "Stand on band with feet slightly wider than shoulder width. Holding a handle in each hand, bring the top of the band over each shoulder. (If it's too long, secure band in place by crossing your arms at your chest.) Sit straight down, chest up, abs firm, pressing knees out over your toes", "Lower Body", "Resistance Band");
 
 var lateralBandWalk = new Exercise ("Lateral Band Walk", "Don’t sidestep these side steps! Step into a loop band or tie a therapy band around the lower legs, just above both ankles. Place feet shoulder-width apart to create tension on the band. From a half-squat position, shift your weight to the left side, stepping sideways with the right leg. Move the standing leg slightly in, but keep the band taut. Take 8 to 10 steps before heading back the other way.", "Lower Body", "Resistance Band");
 
@@ -163,12 +162,17 @@ $(document).ready(function() {
       var newWorkoutList = newWorkout.exercisePusher();
       for (var i=0; i < newWorkoutList.length; i++) {
         var randomId = Math.floor(Math.random() * 0x100);
-        $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + randomId +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + randomId + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
+        $(".exerciseList").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + randomId +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + randomId + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
       }
     };
 
+    var count = $(".clickDesc").length;
+    if (count === 10) {
+      $(".exerciseList li:nth-child(5n)").after("<p class='listBreak'>" + "Second Set:" + "</p>");
+    }
+
       $(".clickDesc").click(function() {
-           $(".timeDisplay").css("top", "7px");
+        $(".timeDisplay").css("top", "7px");
       });
 
     // changes page layout on form submission and ideally fades the form out as well
@@ -203,7 +207,6 @@ $(document).ready(function() {
     var finalMuscleInput = muscleInputFirstLetter + muscleInputSansFirstLetter;
 
     //adds dynamic workout title
-    console.log(finalMuscleInput);
     $(".workoutTitle").text(finalMuscleInput + " :");
 
         if ($(window).width() < 401) {

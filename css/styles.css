@@ -138,8 +138,8 @@ body {
   vertical-align: middle;
   position: relative;
   -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
--moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  -moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
 }
 
 .clickDesc:hover {
@@ -181,6 +181,13 @@ li {
 .timeDisplay p {
     display: inline-block;
     margin-top: 27%;
+}
+
+.listBreak {
+  font-weight: bold;
+  font-family: 'Fredoka One';
+  font-size: 18px;
+  padding-left: 10px;
 }
 
 @media only screen and (max-width: 400px) {
