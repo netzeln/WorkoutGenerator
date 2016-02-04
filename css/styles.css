@@ -11,6 +11,7 @@ body {
   background: -ms-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(59,145,132,1) 100%);
   background: linear-gradient(to bottom, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(59,145,132,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#3b9184', GradientType=0 );
+  background-attachment: fixed;
 }
 
 .container {
@@ -87,7 +88,8 @@ body {
 .jumbotronBottom {
   background-color: #1a1a1a;
   color: #fff;
-  position: absolute;
+  position: fixed;
+  margin-bottom: 0px;
   bottom: 0;
   width: 100%;
   height: 75px;
@@ -137,7 +139,7 @@ body {
   background-color: yellow;
 }
 
- h4 {
+h4 {
   margin-bottom: 30px;
 }
 
@@ -154,6 +156,7 @@ body {
 
 .list {
   display: none;
+  margin-right: 30px;
 }
 
 .workoutTitle {
@@ -162,6 +165,7 @@ body {
   padding-bottom: 20px;
   color: #000;
   font-weight: lighter;
+  margin-left: 40px;
 }
 
 .collapse {

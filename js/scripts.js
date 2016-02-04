@@ -193,6 +193,7 @@ $(document).ready(function() {
     var count = $(".clickDesc").length;
     if (count === 10) {
       $(".exerciseList li:nth-child(5)").after("<p class='listBreak'>" + "Second Set:" + "</p>");
+      $(".container").css("margin-bottom", "200px")
     }
 
       $(".clickDesc").click(function() {
@@ -231,13 +232,6 @@ $(document).ready(function() {
 
     //adds dynamic workout title
     $(".workoutTitle").text(finalMuscleInput + " :");
-
-    if ($(window).width() < 401) {
-      $(".gymCard").hide();
-    } else {
-      $(".gymCard").show();
-      $(".jumbotron h1").css('padding-right', '250px');
-    }
 
     $(".user-focus").text(finalMuscleInput);
     $(".user-equipment").text(equipString);
