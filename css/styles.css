@@ -145,6 +145,7 @@ box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
 .clickDesc:hover {
   color: #35C47E;
   font-weight: bolder;
+  cursor: pointer;
 }
 
 .workoutSummary {
