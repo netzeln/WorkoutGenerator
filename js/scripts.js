@@ -201,7 +201,11 @@ $(document).ready(function() {
       var newWorkoutList = newWorkout.exercisePusher();
       for (var i=0; i < newWorkoutList.length; i++) {
         var randomId = Math.floor(Math.random() * 0x100);
-        $(".exerciseList").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + randomId +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + randomId + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
+        if(newWorkoutList[i].neededEquipment !== "none"){
+          $(".exerciseList").append("<li class='clickDesc equipment' data-toggle='collapse' data-target='#collapse" + randomId +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + randomId + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
+        } else {
+          $(".exerciseList").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + randomId +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + randomId + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
+        }
       }
     };
 
@@ -220,7 +224,7 @@ $(document).ready(function() {
       $.when($(".formBox").fadeOut(2000)).then(function() {
         $(".list").show();
         $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
-        $(".col-md-8").append("<h3>Hey " + nameInput + ",<br> Here's your workout plan!</h3> <p>**Peform each exercise for <strong>20-seconds at high intensity</strong>, followed by a <strong>10-second rest</strong>.**</p> <p>For a " + timeInput + " minute workout:<br> <ul> <li class='instructions'>Perform each exercise in your first set " + numberReps + " times.</li>" + numberSetsText );
+        $(".col-md-8").append("<h3>Hey " + nameInput + ",<br> Here's your workout plan!</h3> <p>**Do exercise for <strong>:20 at high intensity</strong>, followed by a <strong>:10 rest</strong>.**</p> <p>Highlighted Exercises require equipment.<p>For a " + timeInput + " minute workout follow this pattern:<br> <ul> <li class='instructions'>Perform each exercise in your first set " + numberReps + " times.</li>" + numberSetsText );
       });
 
     var equipString = equipmentInput.join(", ");
