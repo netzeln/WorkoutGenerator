@@ -86,6 +86,16 @@ body {
   height: 75px;
 }
 
+.jumbotronBottom p {
+  margin-top: 20px;
+  text-align: center;
+  letter-spacing: 6px;
+}
+
+.jumbotronBottom .btn {
+  letter-spacing: 0px;
+}
+
 .formBox {
   width: 475px;
   background-color: #fff;
@@ -147,8 +157,8 @@ body {
   vertical-align: middle;
   position: relative;
   -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
--moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  -moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
 }
 
 .clickDesc:hover {
