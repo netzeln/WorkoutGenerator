@@ -106,18 +106,6 @@ body {
   margin-bottom: 30px;
 }
 
-#beginnerLeftSpacer {
-  margin-left: 3px;
-}
-
-#beginnerRightSpacer {
-  margin-right: 10px;
-}
-
-#rightSpacer {
-  margin-right: 10px;
-}
-
 .btn-custom {
   text-align: center;
   margin-top: 35px;
@@ -133,11 +121,10 @@ body {
   display: none;
 }
 
-.list h3 {
+.workoutTitle {
   font-family: 'Fredoka One', cursive;
   font-size: 26px;
   padding-bottom: 20px;
-  font-weight: bold;
   color: #000;
 }
 

@@ -144,12 +144,6 @@ $(document).ready(function() {
     var nameInput = $("input#userName").val();
     var timeInput = $(this).find("select.time-choice").val();
     var muscleInput = $(this).find("select.focus-choice").val();
-    var difficultyInput;
-
-    $.each($("input[name='level']:checked"), function() {
-      difficultyInput = $(this).val();
-    });
-
     var equipmentInput = [];
     $.each($("input[name='equip']:checked"), function() {
       equipmentInput.push($(this).val());
