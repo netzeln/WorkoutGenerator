@@ -200,7 +200,7 @@ $(document).ready(function() {
     for (var j = 0; j < timerCount; j++) {
       var newWorkoutList = newWorkout.exercisePusher();
       for (var i=0; i < newWorkoutList.length; i++) {
-        var randomId = Math.floor(Math.random() * 0x100);
+        var randomId = Math.floor(Math.random() * 0x1000);
         if(newWorkoutList[i].neededEquipment !== "none"){
           $(".exerciseList").append("<li class='clickDesc equipment' data-toggle='collapse' data-target='#collapse" + randomId +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + randomId + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
         } else {
