@@ -3,7 +3,6 @@ html {
 }
 
 body {
-  /*background-color: #44A899;*/
   background: rgba(147,206,222,1);
   background: -moz-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(59,145,132,1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(147,206,222,1)), color-stop(41%, rgba(117,189,209,1)), color-stop(100%, rgba(59,145,132,1)));
