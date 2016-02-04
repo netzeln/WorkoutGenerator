@@ -159,7 +159,6 @@ $(document).ready(function() {
         timerCount =2;
       }
 
-console.log(timerCount);
     for (var j = 0 ; j <timerCount;  j++){
       var newWorkoutList = newWorkout.exercisePusher();
       for (var i=0; i < newWorkoutList.length; i++) {
@@ -167,9 +166,10 @@ console.log(timerCount);
       }
     };
 
+
     // changes page layout on form submission and ideally fades the form out as well
 
-      $.when($(".formBox").fadeOut(5000)).then(function() {
+      $.when($(".formBox").fadeOut(2000)).then(function() {
         $(".list").show();
         $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
         $(".col-md-8").text("hey whats up we are the best coders in the entire world, this is so fun, it's better than laying in bed eating pizza with the cat");
@@ -197,6 +197,10 @@ console.log(timerCount);
     var muscleInputFirstLetter = muscleInputEdit.charAt(0).toUpperCase();
     var muscleInputSansFirstLetter = muscleInputEdit.slice(1);
     var finalMuscleInput = muscleInputFirstLetter + muscleInputSansFirstLetter;
+
+    //adds dynamic workout title
+    console.log(finalMuscleInput);
+    $(".workoutTitle").text(finalMuscleInput + " :");
 
         if ($(window).width() < 401) {
           $(".gymCard").hide();
