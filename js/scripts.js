@@ -222,8 +222,8 @@ $(document).ready(function() {
     // changes page layout on form submission and ideally fades the form out as well
       var numberReps = newWorkout.timeSelection();
       var numberSetsText = newWorkout.setsText();
-      $.when($(".formBox").fadeOut(2000)).then(function() {
-        $(".list").show();
+      $.when($(".formBox").fadeOut(1000)).then(function() {
+        $(".list").fadeIn(1000);
         $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
         $(".col-md-8").append("<h3>Hey " + nameInput + ",<br> Here's your workout plan!</h3> <p>**Do exercise for <strong>:20 at high intensity</strong>, followed by a <strong>:10 rest</strong>.**</p> <p>Highlighted Exercises require equipment.<p>For a " + timeInput + " minute workout follow this pattern:<br> <ul> <li class='instructions'>Perform each exercise in your first set " + numberReps + " times.</li>" + numberSetsText );
       });
