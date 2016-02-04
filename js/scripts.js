@@ -1,9 +1,9 @@
 //Exercise Object Constructor
-function Workout(muscleInput, equipmentInput) {
+function Workout(muscleInput, equipmentInput, timeInput){
   this.chosenExercises = [];
   this.availableEquipment = equipmentInput;
   this.muscleInput = muscleInput;
-  console.log(this.availableEquipment);
+  this.timeInput = timeInput;
 }
 
 Workout.prototype.equipmentFilterer = function(equipmentInput) {
@@ -60,7 +60,33 @@ Workout.prototype.exercisePusher = function() {
   return this.chosenExercises;
 }
 
-function Exercise(nameExercise, descriptionExercise, bodyPart, neededEquipment) {
+
+Workout.prototype.timeSelection = function(){
+  var reps;
+  if(this.timeInput == 30 || this.timeInput == 15 || this.timeInput == 25){
+    return reps = 3;
+  }else{
+    return reps = 2;
+  }
+}
+
+Workout.prototype.setsText = function(){
+  var setsTextWritten;
+  if(this.timeInput == 10 || this.timeInput == 15){
+    return setsTextWritten = "<li class='instructions'>Then <em>Repeat</em> your set.</li>";
+  }else if(this.timeInput == 20) {
+    return setsTextWritten = "<li class='instructions'>Then Repeat your first Set. </li> <li class='instructions'>Then, Perform each exercise in your second set 2 times. </li><li class='instructions'>Then repeat your second set.</li>";
+  }else if (this.timeInput == 25){
+    return setsTextWritten = "<li class='instructions'>Then Repeat your first set.</li><li class='instructions'> Take a 2 Minute Break.</li><li class='instructions'> Perform each exercise in your second set 3 times.</li></ul>";
+  }else if(this.timeInput == 30) {
+    return setsTextWritten = "<li class='instructions'>Then Repeat your first set.</li><li class='instructions'> Take a 2 minute Break</li> <li class='instructions'>Perform each exercise in your second set 3 times.</li><li class='instructions'>Then repeat your second set.</li> </ul>";
+  } else {
+    return setsTextWritten = "<li class='instructions'> Great Job!</li></ul>"
+  }
+}
+
+//Exercise Object Constructor for Pseudo Database
+function Exercise(nameExercise, descriptionExercise, bodyPart, neededEquipment){
   this.nameExercise = nameExercise;
   this.descriptionExercise = descriptionExercise;
   this.bodyPart = bodyPart;
@@ -68,14 +94,15 @@ function Exercise(nameExercise, descriptionExercise, bodyPart, neededEquipment) 
 }
 
 // This is our " pseudo- 'Database' of Exercises."
-// These exercises do not need any equipment
+    // These exercises do not need any equipment
 var pushUpStandard = new Exercise("Standard Pushup", "Place arms below shoulders in plank postition, lower your body, keeping core engaged and body in a straight line, push back up to plank", "Upper Body", "none");
 
 var squatStandard = new Exercise("Standard Squat", "Stand with feet shoulder width apart, lower your body like you're sitting into a chair, keeping your knees behind your toes. Return to standing", "Lower Body", "none");
 
 var highKneeStandard = new Exercise("High Knee", "Alternate raising knees to hip height", "Lower Body", "none");
 
-var highKneeFast = new Exercise("Fast High Knee / Run in Place", "Run in place, raising knees to hip height, swinging arms", "Cardio", "none");
+
+var highKneeFast = new Exercise ("High Knee / Run in Place", "Run in place, raising knees to hip height, swinging arms", "Cardio", "none");
 
 var plankStandard = new Exercise("Plank", "Place Arms slightly greater than shoulder width apart and toes on the ground. Hold position, keeping legs, torso and head aligned and core engaged", "Core", "none");
 
@@ -103,19 +130,19 @@ var superman = new Exercise("Superman", "Want some superpowers? Lie face down wi
 
 var burpees = new Exercise("Burpees", "One of the most effective full-body exercises around, this one starts out in a low squat position with hands on the floor. Next, kick the feet back to a push-up position, complete one push-up, then immediately return the feet to the squat position. Leap up as high as possible before squatting and moving back into the push-up portion of the show.", "Cardio", "none");
 
-// These exercises require a chair
+    // These exercises require a chair
 var pushUpIncline = new Exercise("Incline Push-Ups", "Place both palms on the seat of the chair and walk your feet back to a plank position. Keeping your body in a straight line between the top of your head and your heels, bend your elbows and lower your body toward the seat. Pause, then push up through your palms to return to starting position. Repeat.", "Upper Body", "Chair");
 
 var seatTaps = new Exercise("Seat Taps", "Stand facing the front of the chair. Simultaneously lift your right arm and tap the seat of the chair with your left toes. Immediately bring your left foot back down to the ground, and alternate sides so you lift your left arm and tap the seat with your right toes. Continue to alternate taps as quickly as possible, using your arms for momentum and balance.", "Cardio", "Chair");
 
 var seatedKneeLifts = new Exercise("Seated Knee Lifts", "Sit on edge of chair, knees bent, feet flat. Grasp sides of chair, lean back slightly. Pull knees toward chest as you crunch upper body forward using abs, not arms. Lower feet almost to floor, but don't let them touch until the end of the set.", "Core", "Chair");
 
-// These exercises require a resistance band
-var squatFront = new Exercise("Front Squat with Resistance Band", "Stand on band with feet slightly wider than shoulder width. Holding a handle in each hand, bring the top of the band over each shoulder. (If it's too long, secure band in place by crossing your arms at your chest.) Sit straight down, chest up, abs firm, pressing knees out over your toes", "Lower Body", "Resistance Band");
+    // These exercises require a resistance band
+var squatFront = new Exercise ("Front Squat with Band", "Stand on band with feet slightly wider than shoulder width. Holding a handle in each hand, bring the top of the band over each shoulder. (If it's too long, secure band in place by crossing your arms at your chest.) Sit straight down, chest up, abs firm, pressing knees out over your toes", "Lower Body", "Resistance Band");
 
 var lateralBandWalk = new Exercise("Lateral Band Walk", "Don’t sidestep these side steps! Step into a loop band or tie a therapy band around the lower legs, just above both ankles. Place feet shoulder-width apart to create tension on the band. From a half-squat position, shift your weight to the left side, stepping sideways with the right leg. Move the standing leg slightly in, but keep the band taut. Take 8 to 10 steps before heading back the other way.", "Lower Body", "Resistance Band");
 
-// These exercises require free weights
+    // These exercises require free weights
 var hammerCurl = new Exercise("Hammer Curl", "Stand with the feet shoulder width apart, knees slightly bent and back straight. Hold a dumbbell in each hand with the palms facing in, towards each other and elbows straight. Keep your upper arms still as you bend the elbows to lift the weights from your sides up towards your shoulders. Be careful not to arch your back or swing the weights. Slowly return the weights back to the starting position.", "Upper Body", "Weights");
 
 var russianTwist = new Exercise("Russian Twist", "Sit on the floor with your feet in the air and knees bent, holding a dumbbell in both hands in front of your sternum. Keeping your core braced and arms straight, rotate to one side. Then twist the other way. Return to the start again to complete one rep.", "Core", "Weights");
@@ -145,7 +172,7 @@ $(document).ready(function() {
       equipmentInput.push($(this).val());
     });
 
-    var newWorkout = new Workout(muscleInput, equipmentInput);
+    var newWorkout = new Workout(muscleInput, equipmentInput, timeInput);
     var newWorkoutFilterer = newWorkout.equipmentFilterer();
 
     var timerCount;
@@ -157,19 +184,29 @@ $(document).ready(function() {
 
     for (var j = 0; j < timerCount; j++) {
       var newWorkoutList = newWorkout.exercisePusher();
-      for (var i = 0; i < newWorkoutList.length; i++) {
-        $(".list").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + i + "'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + i + "'>" + "<p class='workoutSummary'>" + newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
+      for (var i=0; i < newWorkoutList.length; i++) {
+        var randomId = Math.floor(Math.random() * 0x100);
+        $(".exerciseList").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + randomId +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + randomId + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
       }
     };
 
+    var count = $(".clickDesc").length;
+    if (count === 10) {
+      $(".exerciseList li:nth-child(5n)").after("<p class='listBreak'>" + "Second Set:" + "</p>");
+    }
+
+      $(".clickDesc").click(function() {
+        $(".timeDisplay").css("top", "7px");
+      });
 
     // changes page layout on form submission and ideally fades the form out as well
-
-    $.when($(".formBox").fadeOut(2000)).then(function() {
-      $(".list").show();
-      $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
-      $(".col-md-8").text("hey whats up we are the best coders in the entire world, this is so fun, it's better than laying in bed eating pizza with the cat");
-    });
+      var numberReps = newWorkout.timeSelection();
+      var numberSetsText = newWorkout.setsText();
+      $.when($(".formBox").fadeOut(2000)).then(function() {
+        $(".list").show();
+        $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
+        $(".col-md-8").append("<h3>Hey " + nameInput + ",<br> Here's your workout plan!</h3> <p>**Peform each exercise for <strong>20-seconds at high intensity</strong>, followed by a <strong>10-second rest</strong>.**</p> <p>For a " + timeInput + " minute workout:<br> <ul> <li class='instructions'>Perform each exercise in your first set " + numberReps + " times.</li>" + numberSetsText );
+      });
 
     var equipString = equipmentInput.join(", ");
 
@@ -193,7 +230,6 @@ $(document).ready(function() {
     var finalMuscleInput = muscleInputFirstLetter + muscleInputSansFirstLetter;
 
     //adds dynamic workout title
-    console.log(finalMuscleInput);
     $(".workoutTitle").text(finalMuscleInput + " :");
 
     if ($(window).width() < 401) {

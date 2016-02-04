@@ -27,7 +27,6 @@ body {
   color: #ff4a33;
   font-size: 72px;
   font-weight: bolder;
-
 }
 
 .jumbotron a {
@@ -115,7 +114,6 @@ body {
   -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
   -moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
   box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
-
 }
 
 .form-control {
@@ -123,12 +121,22 @@ body {
 }
 
 .col-md-8 {
-  background-color: red;
+  width: 475px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  padding-top: 20px;
+  margin-left: -50px;
+  margin-top: 60px;
+  -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  -moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
 }
 
 .col-md-2 {
   background-color: yellow;
 }
+
  h4 {
   margin-bottom: 30px;
 }
@@ -173,12 +181,22 @@ body {
 .clickDesc:hover {
   color: #35C47E;
   font-weight: bolder;
+  cursor: pointer;
 }
 
 .workoutSummary {
   padding-top: 30px;
   font-weight: normal;
   font-size: 14px;
+}
+
+li.instructions {
+  background-color: #E5F4F1;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 4px;
+  max-width: 500px;
+  list-style-type:circle;
 }
 
 li {
@@ -188,7 +206,6 @@ li {
   margin-bottom: 10px;
   max-width: 250px;
   list-style-type: none;
-
 }
 
 .timeDisplay {
@@ -206,8 +223,15 @@ li {
 }
 
 .timeDisplay p {
-    display: inline-block;
-    margin-top: 27%;
+  display: inline-block;
+  margin-top: 27%;
+}
+
+.listBreak {
+  font-weight: bold;
+  font-family: 'Fredoka One';
+  font-size: 18px;
+  padding-left: 10px;
 }
 
 @media only screen and (max-width: 400px) {
