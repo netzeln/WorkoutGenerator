@@ -191,12 +191,21 @@ body {
 }
 
 li.instructions {
-  background-color: #E5F4F1;
+  background-color: #e9f5f8;
   border-radius: 4px;
   padding: 8px;
   margin-bottom: 4px;
   max-width: 500px;
   list-style-type:circle;
+}
+
+li.equipment {
+  background-color: #ccc;
+  border-radius: 26px;
+  padding: 18px;
+  margin-bottom: 10px;
+  max-width: 250px;
+  list-style-type: none;
 }
 
 li {
