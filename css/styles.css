@@ -25,7 +25,7 @@ body {
 }
 
 .jumbotron .glyphicon-time {
-  color: #FF523C;
+  color: #ff4a33;
   font-size: 72px;
   font-weight: bolder;
 
@@ -39,7 +39,7 @@ body {
 .jumbotron h1 {
   font-size: 128px;
   font-family: 'Fredoka One', cursive;
-  text-shadow: 3px 3px #666666;
+  text-shadow: 2px 2px #666666;
 }
 
 
@@ -55,7 +55,7 @@ body {
   width: 240px;
   border-bottom-style: double;
   border-width: 35px;
-  border-color: #FF523C;
+  border-color: #ff4a33;
   padding: 20px;
   padding-right: 10px;
   float:left;
@@ -140,7 +140,7 @@ body {
   padding-left: 30px;
   padding-right: 30px;
   border-radius: 24px;
-  background-color: #FF523C;
+  background-color: #ff4a33;
   color: #fff;
 }
 
@@ -150,9 +150,10 @@ body {
 
 .workoutTitle {
   font-family: 'Fredoka One', cursive;
-  font-size: 26px;
+  font-size: 24px;
   padding-bottom: 20px;
   color: #000;
+  font-weight: lighter;
 }
 
 .collapse {
@@ -182,8 +183,8 @@ body {
 
 li {
   background-color: #fff;
-  border-radius: 24px;
-  padding: 16px;
+  border-radius: 26px;
+  padding: 18px;
   margin-bottom: 10px;
   max-width: 250px;
   list-style-type: none;
@@ -194,7 +195,7 @@ li {
   border-radius: 20px;
   height: 40px;
   width: 40px;
-  background-color: #FF523C;
+  background-color: #ff4a33;
   color: #fff;
   text-align: center;
   font-size: 14px;
@@ -216,8 +217,8 @@ li {
     }
     .jumbotron {
       padding: 30px;
-
     }
+
     .jumbotronBottom {
       position: absolute;
       height: 100px;
