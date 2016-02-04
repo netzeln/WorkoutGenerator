@@ -102,7 +102,7 @@ var squatStandard = new Exercise("Standard Squat", "Stand with feet shoulder wid
 var highKneeStandard = new Exercise("High Knee", "Alternate raising knees to hip height", "Lower Body", "none");
 
 
-var highKneeFast = new Exercise ("High Knee / Run in Place", "Run in place, raising knees to hip height, swinging arms", "Cardio", "none");
+var highKneeFast = new Exercise ("Fast High Knee", "Run in place, raising knees to hip height, swinging arms", "Cardio", "none");
 
 var plankStandard = new Exercise("Plank", "Place Arms slightly greater than shoulder width apart and toes on the ground. Hold position, keeping legs, torso and head aligned and core engaged", "Core", "none");
 
