@@ -173,15 +173,34 @@ console.log(timerCount);
       }
     };
 
+    // changes page layout on form submission and ideally fades the form out as well
+
+        $(".formBox").fadeOut(5000);
+        $(".list").show();
+        $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
+        $(".col-md-8").text("hey whats up we are the best coders in the entire world, this is so fun, it's better than laying in bed eating pizza with the cat");
 
 
-      $(".formBox").fadeOut(5000);
-      $(".list").show();
-      $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
-      $(".col-md-8").text("hey whats up we are the best coders in the entire world, this is so fun, it's better than laying in bed eating pizza with the cat");
+    var equipString = equipmentInput.join(", ");
 
+// removes gymCard on mobile view
 
-      var equipString = equipmentInput.join(", ");
+    if ($(window).width() < 401) {
+      $(".gymCard").hide();
+    } else {
+      $(".gymCard").show();
+      $(".jumbotron h1").css('padding-right','250px');
+    }
+
+// adds user data to gymCard
+
+    $(".user-name").text(nameInput);
+    $(".user-minutes").text(timeInput + "min, ");
+
+    var muscleInputEdit = muscleInput.replace("-"," ");
+    var muscleInputFirstLetter = muscleInputEdit.charAt(0).toUpperCase();
+    var muscleInputSansFirstLetter = muscleInputEdit.slice(1);
+    var finalMuscleInput = muscleInputFirstLetter + muscleInputSansFirstLetter;
 
         if ($(window).width() < 401) {
           $(".gymCard").hide();
@@ -190,11 +209,8 @@ console.log(timerCount);
           $(".jumbotron h1").css('padding-right','250px');
         }
 
-      $(".user-name").text(nameInput);
-      $(".user-minutes").text(timeInput + "min, ");
-      $(".user-difficulty").text(difficultyInput);
-      $(".user-focus").text(muscleInput);
-      $(".user-equipment").text(equipString);
+    $(".user-focus").text(finalMuscleInput);
+    $(".user-equipment").text(equipString);
 
     event.preventDefault();
   });

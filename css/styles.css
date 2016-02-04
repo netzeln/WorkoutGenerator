@@ -15,25 +15,34 @@ body {
 
 }
 
+.jumbotron a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .jumbotron h1 {
   font-size: 128px;
   font-family: 'Fredoka One', cursive;
   text-shadow: 3px 3px #666666;
 }
 
+
+.jumbotron .glyphicon:hover {
+  color: #E59E29;
+}
+
 .gymCard {
   display: none;
   background-color: #fff;
   border-radius: 10px;
-  height: 150px;
-  width: 250px;
+  height: 175px;
+  width: 275px;
   border-bottom-style: double;
   border-width: 35px;
   border-color: #FF523C;
   padding: 20px;
   padding-right: 10px;
   float:left;
-  margin-top: 10px;
 }
 
 .gymCard p {
@@ -65,7 +74,7 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 50px;
+  height: 100px;
 }
 
 .formBox {
@@ -75,7 +84,10 @@ body {
   padding: 50px;
   padding-top: 30px;
   margin-left: -50px;
-  margin-top: 30px;
+  margin-top: 90px;
+  -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  -moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
 
 }
 
@@ -126,6 +138,7 @@ body {
   font-size: 26px;
   padding-bottom: 20px;
   font-weight: bold;
+  color: #000;
 }
 
 .collapse {
@@ -137,7 +150,14 @@ body {
   font-size: 16px;
   vertical-align: middle;
   position: relative;
+  -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+-moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+}
 
+.clickDesc:hover {
+  color: #35C47E;
+  font-weight: bolder;
 }
 
 .workoutSummary {
@@ -151,8 +171,9 @@ li {
   border-radius: 24px;
   padding: 16px;
   margin-bottom: 10px;
-  max-width: 270px;
+  max-width: 250px;
   list-style-type: none;
+
 }
 
 .timeDisplay {
@@ -164,7 +185,7 @@ li {
   text-align: center;
   font-size: 14px;
   position: absolute;
-  left: 80%;
+  left: 82%;
   top: 13%;
   vertical-align: middle;
 }

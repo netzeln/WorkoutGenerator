@@ -16,12 +16,12 @@
         <div class="gymCard"><span class="glyphicon glyphicon-user
           " aria-hidden="true"></span>
           <div class="memberInfo"><h3><span class="user-name"></span></h3>
-          <p><span class="user-minutes"></span><span class="user-difficulty"></span></p>
+          <p><span class="user-minutes"></span>
           <p><span class="user-focus"></span></p>
           <p><span class="user-equipment"></span></p>
         </div>
         </div>
-        <h1 class="text-center">Micr<span class="glyphicon glyphicon-time" aria-hidden="true"></span>fit</h1>
+        <h1 class="text-center"><a href="index.html">Micr<span class="glyphicon glyphicon-time" aria-hidden="true"></span>fit</a></h1>
       </div>
       <div class = "container">
       <div class ="row">
@@ -29,11 +29,6 @@
           <div class="list">
             <h3>Your Workout :</h3>
               <ul class ="exerciseList">
-
-
-
-  <!-- <button type="submit" class="btn btn-success">20s</button> -->
-
               </ul>
           </div>
         </div>
@@ -42,10 +37,10 @@
             <h4>Enter your information to retrieve a workout!</h4>
             <form id="workoutGenerator">
               <label for="nameChoice">Your name:</label>
-              <input type="text" class="form-control" placeholder="Your Name" id="userName">
+              <input type="text" class="form-control" placeholder="Your Name" id="userName" required>
                 <div class="form-group">
                   <label for="timeChoice">Amount of time:</label>
-                    <select class="form-control time-choice">
+                    <select class="form-control time-choice" required>
                       <option></option>
                       <option value =5>5 minutes</option>
                       <option value =10>10 minutes</option>
@@ -57,8 +52,8 @@
                 </div>
                 <div class="form-group">
                   <label for="focusChoice">Target muscle group:</label>
-                    <select class="form-control focus-choice">
-                      <option value ="no-focus" selected>Total Body Workout</option>
+                    <select class="form-control focus-choice" required>
+                      <option value ="Total Body Workout" selected>Total Body Workout</option>
                       <option value ="upper-body">Upper-body</option>
                       <option value ="lower-body">Lower-body</option>
                       <option value ="core">Core</option>
@@ -66,16 +61,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                  <label for="levelChoice">Difficulty level:</label><br>
-                  <label class="radio-inline">
-                    <input type="radio" id="beginner" name="level" value="Beginner">Beginner<span id="beginnerRightSpacer"></span></label>
-                  <label class="radio-inline">
-                    <input type="radio" id="intermediate" name="level" value="Intermediate">Intermediate<span id="rightSpacer"></span></label></label>
-                  <label class="radio-inline">
-                    <input type="radio" id="advanced" name="level" value="Advanced">Advanced<span id="rightSpacer"></span></label></label>
-                </div>
-                <div class="form-group">
-                  <label for="equipmentChoice">Equipment available:</label>
+                  <label for="equipmentChoice">Equipment (if available):</label>
                       <div class="checkbox">
                         <label>
                         <input type="checkbox" id="chair" name="equip" value="Chair"> Chair
