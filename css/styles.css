@@ -248,7 +248,7 @@ li {
     }
 
     .jumbotronBottom {
-      position: absolute;
+      position: fixed;
       height: 100px;
     }
 }
