@@ -147,13 +147,14 @@ body {
   vertical-align: middle;
   position: relative;
   -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
--moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  -moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
 }
 
 .clickDesc:hover {
   color: #35C47E;
   font-weight: bolder;
+  cursor: pointer;
 }
 
 .workoutSummary {
@@ -169,6 +170,7 @@ li.instructions {
   max-width: 500px;
   list-style-type:circle;
 }
+
 li {
   background-color: #fff;
   border-radius: 24px;
@@ -176,7 +178,6 @@ li {
   margin-bottom: 10px;
   max-width: 250px;
   list-style-type: none;
-
 }
 
 
@@ -196,8 +197,15 @@ li {
 }
 
 .timeDisplay p {
-    display: inline-block;
-    margin-top: 27%;
+  display: inline-block;
+  margin-top: 27%;
+}
+
+.listBreak {
+  font-weight: bold;
+  font-family: 'Fredoka One';
+  font-size: 18px;
+  padding-left: 10px;
 }
 
 @media only screen and (max-width: 400px) {
