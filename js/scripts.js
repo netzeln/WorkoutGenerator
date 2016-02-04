@@ -102,7 +102,7 @@ var squatStandard = new Exercise("Standard Squat", "Stand with feet shoulder wid
 var highKneeStandard = new Exercise("High Knee", "Alternate raising knees to hip height", "Lower Body", "none");
 
 
-var highKneeFast = new Exercise ("Fast High Knee", "Run in place, raising knees to hip height, swinging arms", "Cardio", "none");
+var highKneeFast = new Exercise ("High Knee / Run in Place", "Run in place, raising knees to hip height, swinging arms", "Cardio", "none");
 
 var plankStandard = new Exercise("Plank", "Place Arms slightly greater than shoulder width apart and toes on the ground. Hold position, keeping legs, torso and head aligned and core engaged", "Core", "none");
 
@@ -128,15 +128,7 @@ var wallSit = new Exercise("Wall Sit", "Who needs a chair when there’s a wall?
 
 var superman = new Exercise("Superman", "Want some superpowers? Lie face down with arms and legs extended. Keeping the torso as still as possible, simultaneously raise the arms and legs to form a small curve in the body. Cape optional.", "Core", "none");
 
-var plankSide = new Exercise("Side Plank", "Lie on your side, in a straight line from head to feet, resting on your forearm. Your elbow should be directly under your shoulder. With your abdominals gently contracted, lift your hips off the floor, maintaining the line. Keep your hips square and your neck in line with your spine.", "Core", "none");
-
 var burpees = new Exercise("Burpees", "One of the most effective full-body exercises around, this one starts out in a low squat position with hands on the floor. Next, kick the feet back to a push-up position, complete one push-up, then immediately return the feet to the squat position. Leap up as high as possible before squatting and moving back into the push-up portion of the show.", "Cardio", "none");
-
-var legCrunch = new Exercise("Raised Leg Crunches", "Lie on your back, raise straightened legs to 45-degrees, do a crunch", "Core", "none");
-
-var fastPunches = new Exercise("Fast Punches", "Lower into a squat position. Quickly alternate forward punches, turning torso to extend reach.", "Cardio", "none");
-
-var squatJump = new Exercise("Squat Jump", "Perform a squat, at the top of the movement, Jump.  Alternate Split Squats for extra challenge", "Lower Body", "none");
 
     // These exercises require a chair
 var pushUpIncline = new Exercise("Incline Push-Ups", "Place both palms on the seat of the chair and walk your feet back to a plank position. Keeping your body in a straight line between the top of your head and your heels, bend your elbows and lower your body toward the seat. Pause, then push up through your palms to return to starting position. Repeat.", "Upper Body", "Chair");
@@ -145,29 +137,22 @@ var seatTaps = new Exercise("Seat Taps", "Stand facing the front of the chair. S
 
 var seatedKneeLifts = new Exercise("Seated Knee Lifts", "Sit on edge of chair, knees bent, feet flat. Grasp sides of chair, lean back slightly. Pull knees toward chest as you crunch upper body forward using abs, not arms. Lower feet almost to floor, but don't let them touch until the end of the set.", "Core", "Chair");
 
-var chairDips= new Exercise("Chair Dips", "Facing the ceiling, hands holding sides of the chair and feet flat on the ground, dip by bending at the elbows. .", "Upper Body", "Chair");
-
     // These exercises require a resistance band
 var squatFront = new Exercise ("Front Squat with Band", "Stand on band with feet slightly wider than shoulder width. Holding a handle in each hand, bring the top of the band over each shoulder. (If it's too long, secure band in place by crossing your arms at your chest.) Sit straight down, chest up, abs firm, pressing knees out over your toes", "Lower Body", "Resistance Band");
 
 var lateralBandWalk = new Exercise("Lateral Band Walk", "Don’t sidestep these side steps! Step into a loop band or tie a therapy band around the lower legs, just above both ankles. Place feet shoulder-width apart to create tension on the band. From a half-squat position, shift your weight to the left side, stepping sideways with the right leg. Move the standing leg slightly in, but keep the band taut. Take 8 to 10 steps before heading back the other way.", "Lower Body", "Resistance Band");
 
-var woodChopper = new Exercise("Wood Chopper", "Attach band to a fixed point at chest level. Stand perpendicular to the point, extend arms outward to hold the end of the band. Keeping arms straight, twist torso, stretching the band.", "Upper Body", "Resistance Band");
-
-
     // These exercises require free weights
 var hammerCurl = new Exercise("Hammer Curl", "Stand with the feet shoulder width apart, knees slightly bent and back straight. Hold a dumbbell in each hand with the palms facing in, towards each other and elbows straight. Keep your upper arms still as you bend the elbows to lift the weights from your sides up towards your shoulders. Be careful not to arch your back or swing the weights. Slowly return the weights back to the starting position.", "Upper Body", "Weights");
 
-var squatPress = new Exercise("Squat Press", "Holding weights at shoulder height, perform a squat. At top of squat, extend arms upward with weights", "Lower Body", "Weights")
-
 var russianTwist = new Exercise("Russian Twist", "Sit on the floor with your feet in the air and knees bent, holding a dumbbell in both hands in front of your sternum. Keeping your core braced and arms straight, rotate to one side. Then twist the other way. Return to the start again to complete one rep.", "Core", "Weights");
 
-var equipmentExercises = [pushUpIncline, hammerCurl, squatFront, lateralBandWalk, seatedKneeLifts, russianTwist, seatTaps, woodChopper, squatPress, chairDips];
+var equipmentExercises = [pushUpIncline, hammerCurl, squatFront, lateralBandWalk, seatedKneeLifts, russianTwist, seatTaps];
 
 var upperBody = [pushUpStandard, plankUpdown, pushUpWide, tricepDips];
-var lowerBody = [squatStandard, squatSplit, highKneeStandard, wallSit, squatJump];
-var core = [plankStandard, plankElbow, crunchesStandard, superman, plankSide, legCrunch];
-var cardio = [highKneeFast, jumpingJackStandard, lineJump, burpees, fastPunches];
+var lowerBody = [squatStandard, squatSplit, highKneeStandard, wallSit];
+var core = [plankStandard, plankElbow, crunchesStandard, superman];
+var cardio = [highKneeFast, jumpingJackStandard, lineJump, burpees];
 
 var exerciseCategories = [upperBody, cardio, lowerBody, core, cardio];
 var upperBodyFocus = [upperBody, cardio, upperBody, cardio, upperBody];
@@ -200,19 +185,14 @@ $(document).ready(function() {
     for (var j = 0; j < timerCount; j++) {
       var newWorkoutList = newWorkout.exercisePusher();
       for (var i=0; i < newWorkoutList.length; i++) {
-        var randomId = Math.floor(Math.random() * 0x1000);
-        if(newWorkoutList[i].neededEquipment !== "none"){
-          $(".exerciseList").append("<li class='clickDesc equipment' data-toggle='collapse' data-target='#collapse" + randomId +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + randomId + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
-        } else {
-          $(".exerciseList").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + randomId +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + randomId + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
-        }
+        var randomId = Math.floor(Math.random() * 0x100);
+        $(".exerciseList").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + randomId +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + randomId + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
       }
     };
 
     var count = $(".clickDesc").length;
     if (count === 10) {
-      $(".exerciseList li:nth-child(5)").after("<p class='listBreak'>" + "Second Set:" + "</p>");
-      $(".container").css("margin-bottom", "200px")
+      $(".exerciseList li:nth-child(5n)").after("<p class='listBreak'>" + "Second Set:" + "</p>");
     }
 
       $(".clickDesc").click(function() {
@@ -225,22 +205,19 @@ $(document).ready(function() {
       $.when($(".formBox").fadeOut(2000)).then(function() {
         $(".list").show();
         $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
-        $(".col-md-8").append("<h3>Hey " + nameInput + ",<br> Here's your workout plan!</h3> <p>**Do exercise for <strong>:20 at high intensity</strong>, followed by a <strong>:10 rest</strong>.**</p> <p>Highlighted Exercises require equipment.<p>For a " + timeInput + " minute workout follow this pattern:<br> <ul> <li class='instructions'>Perform each exercise in your first set " + numberReps + " times.</li>" + numberSetsText );
+        $(".col-md-8").append("<h3>Hey " + nameInput + ",<br> Here's your workout plan!</h3> <p>**Peform each exercise for <strong>20-seconds at high intensity</strong>, followed by a <strong>10-second rest</strong>.**</p> <p>For a " + timeInput + " minute workout:<br> <ul> <li class='instructions'>Perform each exercise in your first set " + numberReps + " times.</li>" + numberSetsText + "<div><span class='btn btn-primary' onclick=$('#showable').toggle()>Button Here</span><br> <img class='img-responsive' id='showable' src='img/countdown-infinite.gif'></div>");
       });
 
     var equipString = equipmentInput.join(", ");
 
     // removes gymCard on mobile view
-    $(window).on('resize', function() {
-      if ($(window).width() < 401) {
-        $(".gymCard").hide();
-        $(".jumbotron h1").css('padding-right', '0px');
-      } else {
-        $(".gymCard").show();
-        $(".jumbotron h1").css('padding-right', '250px');
-      }
-    }).trigger('resize');
 
+    if ($(window).width() < 401) {
+      $(".gymCard").hide();
+    } else {
+      $(".gymCard").show();
+      $(".jumbotron h1").css('padding-right', '250px');
+    }
 
     // adds user data to gymCard
 
@@ -254,6 +231,13 @@ $(document).ready(function() {
 
     //adds dynamic workout title
     $(".workoutTitle").text(finalMuscleInput + " :");
+
+    if ($(window).width() < 401) {
+      $(".gymCard").hide();
+    } else {
+      $(".gymCard").show();
+      $(".jumbotron h1").css('padding-right', '250px');
+    }
 
     $(".user-focus").text(finalMuscleInput);
     $(".user-equipment").text(equipString);
