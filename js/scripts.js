@@ -232,7 +232,7 @@ $(document).ready(function() {
 
     // removes gymCard on mobile view
     $(window).on('resize', function() {
-      if ($(window).width() < 401) {
+      if ($(window).width() < 1024) {
         $(".gymCard").hide();
         $(".jumbotron h1").css('padding-right', '0px');
       } else {
