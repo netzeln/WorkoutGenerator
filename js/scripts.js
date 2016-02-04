@@ -192,7 +192,7 @@ $(document).ready(function() {
 
     var count = $(".clickDesc").length;
     if (count === 10) {
-      $(".exerciseList li:nth-child(5n)").after("<p class='listBreak'>" + "Second Set:" + "</p>");
+      $(".exerciseList li:nth-child(5)").after("<p class='listBreak'>" + "Second Set:" + "</p>");
     }
 
       $(".clickDesc").click(function() {
