@@ -1,8 +1,9 @@
 //Exercise Object Constructor
-function Workout(muscleInput, equipmentInput){
+function Workout(muscleInput, equipmentInput, timeInput){
   this.chosenExercises = [];
   this.availableEquipment = equipmentInput;
   this.muscleInput = muscleInput;
+  this.timeInput = timeInput;
 }
 
 Workout.prototype.equipmentFilterer = function(equipmentInput){
@@ -58,6 +59,34 @@ Workout.prototype.exercisePusher = function(){
 this.chosenExercises = selectedExercises;
 return this.chosenExercises;
 }
+
+Workout.prototype.timeSelection = function(){
+  var reps;
+  if(this.timeInput == 30 || this.timeInput == 15 || this.timeInput == 25){
+    return reps = 3;
+  }else{
+    return reps = 2;
+  }
+
+}
+
+Workout.prototype.setsText = function(){
+  var setsTextWritten;
+  if(this.timeInput == 10 || this.timeInput == 15){
+    return setsTextWritten = "<li class='instructions'>Then <em>Repeat</em> your set.</li>";
+  }else if(this.timeInput == 20) {
+    return setsTextWritten = "<li class='instructions'>Then Repeat your first Set. </li> <li class='instructions'>Then, Perform each exercise in your second set 2 times. </li><li class='instructions'>Then repeat your second set.</li>";
+  }else if (this.timeInput == 25){
+    return setsTextWritten = "<li class='instructions'>Then Repeat your first set.</li><li class='instructions'> Take a 2 Minute Break.</li><li class='instructions'> Perform each exercise in your second set 3 times.</li></ul>";
+  }else if(this.timeInput == 30) {
+    return setsTextWritten = "<li class='instructions'>Then Repeat your first set.</li><li class='instructions'> Take a 2 minute Break</li> <li class='instructions'>Perform each exercise in your second set 3 times.</li><li class='instructions'>Then repeat your second set.</li> </ul>";
+  } else {
+    return setsTextWritten = "<li class='instructions'> Great Job!</li></ul>"
+  }
+
+}
+
+//Exercise Object Constructor for Pseudo Database
 
 function Exercise(nameExercise, descriptionExercise, bodyPart, neededEquipment){
   this.nameExercise = nameExercise;
@@ -148,7 +177,7 @@ $(document).ready(function() {
       equipmentInput.push($(this).val());
     });
 
-    var newWorkout = new Workout(muscleInput, equipmentInput);
+    var newWorkout = new Workout(muscleInput, equipmentInput, timeInput);
     var newWorkoutFilterer = newWorkout.equipmentFilterer();
 
     var timerCount;
@@ -176,11 +205,13 @@ $(document).ready(function() {
       });
 
     // changes page layout on form submission and ideally fades the form out as well
-
+      var numberReps = newWorkout.timeSelection();
+      var numberSetsText = newWorkout.setsText();
+      console.log(newWorkout.timeSelection());
       $.when($(".formBox").fadeOut(2000)).then(function() {
         $(".list").show();
         $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
-        $(".col-md-8").text("hey whats up we are the best coders in the entire world, this is so fun, it's better than laying in bed eating pizza with the cat");
+        $(".col-md-8").append("<h3>Hey " + nameInput + ",<br> Here's your workout plan!</h3> <p>**Peform each exercise for <strong>20-seconds at high intensity</strong>, followed by a <strong>10-second rest</strong>.**</p> <p>For a " + timeInput + " minute workout:<br> <ul> <li class='instructions'>Perform each exercise in your first set " + numberReps + " times.</li>" + numberSetsText );
       });
 
 

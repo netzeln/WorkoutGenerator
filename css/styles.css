@@ -96,7 +96,16 @@ body {
 }
 
 .col-md-8 {
-  background-color: red;
+  width: 475px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  padding-top: 20px;
+  margin-left: -50px;
+  margin-top: 60px;
+  -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  -moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
 }
 
 .col-md-2 {
@@ -153,6 +162,14 @@ body {
   font-weight: normal;
   font-size: 14px;
 }
+li.instructions {
+  background-color: #E5F4F1;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 4px;
+  max-width: 500px;
+  list-style-type:circle;
+}
 
 li {
   background-color: #fff;
@@ -161,8 +178,9 @@ li {
   margin-bottom: 10px;
   max-width: 250px;
   list-style-type: none;
-
 }
+
+
 
 .timeDisplay {
   border-radius: 20px;
@@ -179,8 +197,8 @@ li {
 }
 
 .timeDisplay p {
-    display: inline-block;
-    margin-top: 27%;
+  display: inline-block;
+  margin-top: 27%;
 }
 
 .listBreak {
