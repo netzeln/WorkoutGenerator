@@ -239,22 +239,31 @@ li {
 }
 
 @media only screen and (max-width: 400px) {
-    .jumbotron h1 {
-      text-align: center;
-      font-size: 96px;
-    }
-    .jumbotron {
-      padding: 30px;
-    }
+  .jumbotron h1 {
+    text-align: center;
+    font-size: 86px;
+  }
+  .jumbotron {
+    padding: 30px;
+  }
 
-    .jumbotronBottom {
-      position: fixed;
-      height: 100px;
-    }
-    .col-md-8 {
-      width: 300px;
-      margin-right: 0;
-      margin-left: 40px !important;
-      margin-bottom: 120px;
-    }
+  .jumbotronBottom {
+    position: fixed;
+    height: 100px;
+  }
+  .col-md-8 {
+    width: 300px;
+    margin-right: 0;
+    margin-left: 40px !important;
+    margin-bottom: 120px;
+  }
 }
+
+/*@media only screen and (min-width: 401px) {
+  .jumbotron h1 {
+    padding-right: 250px;
+  }
+}*/
+
+
+/*@media 1200px instructions break*/

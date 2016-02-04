@@ -212,13 +212,16 @@ $(document).ready(function() {
     var equipString = equipmentInput.join(", ");
 
     // removes gymCard on mobile view
+    $(window).on('resize', function() {
+      if ($(window).width() < 401) {
+        $(".gymCard").hide();
+        $(".jumbotron h1").css('padding-right', '0px');
+      } else {
+        $(".gymCard").show();
+        $(".jumbotron h1").css('padding-right', '250px');
+      }
+    }).trigger('resize');
 
-    if ($(window).width() < 401) {
-      $(".gymCard").hide();
-    } else {
-      $(".gymCard").show();
-      $(".jumbotron h1").css('padding-right', '250px');
-    }
 
     // adds user data to gymCard
 
