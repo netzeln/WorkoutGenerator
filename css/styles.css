@@ -58,6 +58,22 @@ body {
   border-radius: 24px;
   background-color: #ff4a33;
   color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.btn-timer {
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 24px;
+  background-color: #ff4a33;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 6px;
 }
 
 .clickDesc {
@@ -76,25 +92,19 @@ body {
   cursor: pointer;
 }
 
-.col-md-2 {
-  background-color: yellow;
-}
-
 .col-md-8 {
-  width: 475px;
+  text-align: center;
+  width: 575px;
   background-color: #fff;
   border-radius: 10px;
   padding: 40px;
   padding-top: 20px;
   margin-left: 25px;
-  margin-top: 25px;
+  margin-top: 10px;
+  margin-bottom: 25px;
   -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
   -moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
   box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
-}
-
-.col-md-8 h3{
-  font-size: 24px;
 }
 
 .col-md-8 .fancyName {
