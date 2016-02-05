@@ -151,6 +151,7 @@ var buttKick = new Exercise("Butt Kick", "These will literally kick your butt—
 
 var mountainClimber = new Exercise("Mountain Climber", "We’re not going up any real mountains, but these are a close second. Start down on your hands and knees, and bring the right foot forward to the chest while the left leg remains straight. Engaging the core, quickly switch legs.", "Cardio", "none");
 
+
     // These exercises require a chair
 var pushUpIncline = new Exercise("Incline Push-Ups", "Place both palms on the seat of the chair and walk your feet back to a plank position. Keeping your body in a straight line between the top of your head and your heels, bend your elbows and lower your body toward the seat. Pause, then push up through your palms to return to starting position. Repeat.", "Upper Body", "Chair");
 
@@ -187,6 +188,7 @@ var getUpSitUp = new Exercise("Get Up Sit Up", "Lie on your back on the floor, s
 
 var renegadeRow = new Exercise("Renegade Row", "With a dumbbell in each hand, get into pushup position with your feet wide. Shift your weight to your left side and row the right-hand dumbbell to your side. Repeat on the opposite side.", "Upper Body", "Weights");
 
+//pseudo database arrays
 var equipmentExercises = [pushUpIncline, hammerCurl, squatFront, lateralBandWalk, seatedKneeLifts, russianTwist, seatTaps, woodChopper, squatPress, chairDips, getUpSitUp, renegadeRow, plankKneeCross, quadricepsContractions, bicepsCurl, tricepsKickback];
 
 var upperBody = [pushUpStandard, plankUpdown, pushUpWide, tricepDips, pushUpDiamond, pushUpHandstand, pushUpDiamond];
@@ -194,7 +196,7 @@ var lowerBody = [squatStandard, squatSplit, highKneeStandard, wallSit, squatJump
 var core = [plankStandard, plankElbow, crunchesStandard, superman, legCrunch, bicycleKick];
 var cardio = [highKneeFast, jumpingJackStandard, lineJump, burpees, fastPunches, buttKick, mountainClimber];
 
-var exerciseCategories = [upperBody, cardio, lowerBody, core, cardio];
+var exerciseCategories = [cardio, lowerBody, upperBody, cardio, core];
 var upperBodyFocus = [upperBody, cardio, upperBody, cardio, upperBody];
 var lowerBodyFocus = [lowerBody, cardio, lowerBody, cardio, lowerBody];
 var coreFocus = [core, cardio, core, cardio, core];
