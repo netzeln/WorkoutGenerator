@@ -1,5 +1,40 @@
-html {
-  height: 100%;
+@media only screen and (max-width: 400px) {
+  .jumbotron h1 {
+    text-align: center;
+    font-size: 86px;
+  }
+  .jumbotron {
+    padding: 30px;
+  }
+
+  .jumbotronBottom {
+    position: fixed;
+    height: 100px;
+  }
+  .col-md-8 {
+    width: 300px;
+    margin-right: 0;
+    margin-left: 140px !important;
+    margin-bottom: 120px;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 991px) {
+  .col-md-8 {
+    margin-left: 20% !important;
+  }
+  .list {
+    margin-left: 30%;
+  }
+  .formBox {
+    margin-left: 20%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .workoutTitle {
+    font-size: 20px;
+  }
 }
 
 body {
@@ -14,112 +49,35 @@ body {
   background-attachment: fixed;
 }
 
-.container {
-  height: 100%;
-}
-
-.jumbotron {
-  color: #fff;
-  padding: 10px;
-  background-color: #1a1a1a;
-}
-
-.jumbotron .glyphicon-time {
-  color: #ff4a33;
-  font-size: 72px;
-  font-weight: bolder;
-}
-
-.jumbotron a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.jumbotron h1 {
-  font-size: 128px;
-  font-family: 'Fredoka One', cursive;
-  text-shadow: 2px 2px #666666;
-}
-
-
-.jumbotron .glyphicon:hover {
-  color: #E59E29;
-}
-
-.gymCard {
-  display: none;
-  background-color: #fff;
-  border-radius: 10px;
-  height: 150px;
-  width: 240px;
-  border-bottom-style: double;
-  border-width: 35px;
-  border-color: #ff4a33;
-  padding: 20px;
-  padding-right: 10px;
-  float:left;
-  margin-top: 10px;
-  margin-left: 20px;
-}
-
-.gymCard p {
-  color: #000;
-  font-size: 14px;
-  line-height: 6px;
-}
-
-.gymCard h3 {
-  font-family: 'Satisfy', cursive;
-  margin-top: 5px;
-  color: #000;
-}
-
-.memberInfo {
-  text-align: left;
-  float: right;
-}
-
-.glyphicon-user {
-  font-size: 24px;
-  color: #666666;
-  float: left;
-}
-
-.jumbotronBottom {
-  background-color: #1a1a1a;
-  color: #fff;
-  position: fixed;
-  margin-bottom: 0px;
-  bottom: 0;
-  width: 100%;
-  height: 75px;
-}
-
-.jumbotronBottom p {
-  margin-top: 20px;
+.btn-custom {
   text-align: center;
-  letter-spacing: 6px;
+  margin-top: 35px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 24px;
+  background-color: #ff4a33;
+  color: #fff;
 }
 
-.jumbotronBottom .btn {
-  letter-spacing: 0px;
-}
-
-.formBox {
-  width: 475px;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 50px;
-  padding-top: 30px;
-  margin-left: -50px;
-  margin-top: 20px;
+.clickDesc {
+  font-weight: bold;
+  font-size: 16px;
+  vertical-align: middle;
+  position: relative;
   -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
   -moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
   box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
 }
 
-.form-control {
-  margin-bottom: 20px;
+.clickDesc:hover {
+  color: #35C47E;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.col-md-2 {
+  background-color: yellow;
 }
 
 .col-md-8 {
@@ -144,62 +102,141 @@ body {
   font-size: 24px;
 }
 
-.col-md-2 {
-  background-color: yellow;
+.collapse {
+  display: none;
+}
+
+.container {
+  height: 100%;
+}
+
+.formBox {
+  width: 475px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 50px;
+  padding-top: 30px;
+  margin-left: -50px;
+  margin-top: 20px;
+  -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  -moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+.glyphicon-user {
+  font-size: 24px;
+  color: #666666;
+  float: left;
+}
+
+.gymCard {
+  display: none;
+  background-color: #fff;
+  border-radius: 10px;
+  height: 150px;
+  width: 240px;
+  border-bottom-style: double;
+  border-width: 35px;
+  border-color: #ff4a33;
+  padding: 20px;
+  padding-right: 10px;
+  float:left;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.gymCard h3 {
+  font-family: 'Satisfy', cursive;
+  margin-top: 5px;
+  color: #000;
+}
+
+.gymCard p {
+  color: #000;
+  font-size: 14px;
+  line-height: 6px;
 }
 
 h4 {
   margin-bottom: 30px;
 }
 
-.btn-custom {
-  text-align: center;
-  margin-top: 35px;
+.highlight {
+  background-color: #ccc;
+  display: inline;
+}
+
+html {
+  height: 100%;
+}
+
+.jumbotron {
+  color: #fff;
   padding: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-  border-radius: 24px;
-  background-color: #ff4a33;
+  background-color: #1a1a1a;
+}
+
+.jumbotron a {
+  text-decoration: none;
   color: #fff;
 }
 
-.list {
-  display: none;
-  margin-right: 30px;
-}
-
-.workoutTitle {
+.jumbotron h1 {
+  font-size: 128px;
   font-family: 'Fredoka One', cursive;
-  font-size: 24px;
-  color: #000;
-  font-weight: lighter;
-  margin-left: 40px;
+  text-shadow: 2px 2px #666666;
 }
 
-.collapse {
-  display: none;
+.jumbotron .glyphicon:hover {
+  color: #E59E29;
 }
 
-.clickDesc {
-  font-weight: bold;
-  font-size: 16px;
-  vertical-align: middle;
-  position: relative;
-  -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
-  -moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
-  box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
-}
-
-.clickDesc:hover {
-  color: #35C47E;
+.jumbotron .glyphicon-time {
+  color: #ff4a33;
+  font-size: 72px;
   font-weight: bolder;
-  cursor: pointer;
 }
 
-.workoutSummary {
-  padding-top: 30px;
-  font-weight: normal;
-  font-size: 14px;
+.jumbotronBottom {
+  background-color: #1a1a1a;
+  color: #fff;
+  position: fixed;
+  margin-bottom: 0px;
+  bottom: 0;
+  width: 100%;
+  height: 75px;
+}
+
+.jumbotronBottom p {
+  margin-top: 20px;
+  text-align: center;
+  letter-spacing: 6px;
+}
+
+.jumbotronBottom .btn {
+  letter-spacing: 0px;
+}
+
+li {
+  background-color: #fff;
+  border-radius: 26px;
+  padding: 18px;
+  margin-bottom: 10px;
+  max-width: 250px;
+  list-style-type: none;
+}
+
+li.equipment {
+  background-color: #ccc;
+  border-radius: 26px;
+  padding: 18px;
+  margin-bottom: 10px;
+  max-width: 250px;
+  list-style-type: none;
 }
 
 li.instructions {
@@ -212,32 +249,29 @@ li.instructions {
   list-style-position:inside
 }
 
+.list {
+  display: none;
+  margin-right: 30px;
+}
+
+.listBreak {
+  font-weight: bold;
+  font-family: 'Fredoka One', cursive;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
 .listBuddy {
   padding-left:0;
 }
 
-li.equipment {
-  background-color: #ccc;
-  border-radius: 26px;
-  padding: 18px;
-  margin-bottom: 10px;
-  max-width: 250px;
-  list-style-type: none;
+.memberInfo {
+  text-align: left;
+  float: right;
 }
 
-.highlight {
-  background-color: #ccc;
-  display: inline;
-}
-
-
-li {
-  background-color: #fff;
-  border-radius: 26px;
-  padding: 18px;
-  margin-bottom: 10px;
-  max-width: 250px;
-  list-style-type: none;
+#showable{
+  display: none;
 }
 
 .timeDisplay {
@@ -259,51 +293,10 @@ li {
   margin-top: 27%;
 }
 
-.listBreak {
-  font-weight: bold;
-  font-family: 'Fredoka One';
-  font-size: 18px;
-  padding-left: 10px;
-}
-
-#showable{
-  display: none;
-}
-@media only screen and (max-width: 400px) {
-  .jumbotron h1 {
-    text-align: center;
-    font-size: 86px;
-  }
-  .jumbotron {
-    padding: 30px;
-  }
-
-  .jumbotronBottom {
-    position: fixed;
-    height: 100px;
-  }
-  .col-md-8 {
-    width: 300px;
-    margin-right: 0;
-    margin-left: 140px !important;
-    margin-bottom: 120px;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .workoutTitle {
-    font-size: 20px;
-  }
-}
-
-@media only screen and (min-width: 401px) and (max-width: 991px) {
-  .col-md-8 {
-    margin-left: 20% !important;
-  }
-  .list {
-    margin-left: 30%;
-  }
-  .formBox {
-    margin-left: 20%;
-  }
+.workoutTitle {
+  font-family: 'Fredoka One', cursive;
+  font-size: 24px;
+  color: #000;
+  font-weight: lighter;
+  margin-left: 40px;
 }
