@@ -248,8 +248,8 @@ li.instructions {
 
 p.workoutSummary {
   font-weight: normal;
-  padding-top: 10px;
-  font-size: 14px;
+  padding-top: 20px;
+  font-size: 12px;
 }
 
 .second.col-md-8 {
@@ -300,6 +300,7 @@ p.workoutSummary {
     position: fixed;
     height: 100px;
   }
+
   .col-md-8 {
     width: 300px;
     margin-right: 0;
@@ -312,9 +313,11 @@ p.workoutSummary {
   .col-md-8 {
     margin-left: 12% !important;
   }
+
   .list {
     margin-left: 30%;
   }
+
   .formBox {
     margin-left: 20%;
   }
