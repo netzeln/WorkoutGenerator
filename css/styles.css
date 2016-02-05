@@ -91,7 +91,7 @@ body {
   border-radius: 10px;
   padding: 50px;
   padding-top: 30px;
-  margin-left: -50px;
+  margin-left: -58px;
   margin-top: 20px;
   margin-bottom: 100px;
   -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
@@ -101,6 +101,13 @@ body {
 
 .form-control {
   margin-bottom: 20px;
+}
+
+.glyphCol {
+  height: 40px
+  width: 30px;
+  margin-right: 10px;
+  float: left;
 }
 
 .glyphicon-user {
@@ -133,7 +140,7 @@ body {
 
 .gymCard p {
   color: #000;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 6px;
 }
 
@@ -167,7 +174,7 @@ html {
   text-shadow: 2px 2px #666666;
 }
 
-.jumbotron .glyphicon:hover {
+.jumbotron .glyphicon-time:hover {
   color: #E59E29;
 }
 
@@ -243,7 +250,7 @@ li.instructions {
 
 .memberInfo {
   text-align: left;
-  float: right;
+  float: left;
 }
 
 p.workoutSummary {
@@ -317,6 +324,12 @@ p.workoutSummary {
   }
   .formBox {
     margin-left: 20%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .formBox {
+    margin-top: 30%;
   }
 }
 
