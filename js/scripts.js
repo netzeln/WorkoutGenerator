@@ -151,7 +151,6 @@ var buttKick = new Exercise("Butt Kick", "These will literally kick your butt—
 
 var mountainClimber = new Exercise("Mountain Climber", "We’re not going up any real mountains, but these are a close second. Start down on your hands and knees, and bring the right foot forward to the chest while the left leg remains straight. Engaging the core, quickly switch legs.", "Cardio", "none");
 
-
     // These exercises require a chair
 var pushUpIncline = new Exercise("Incline Push-Ups", "Place both palms on the seat of the chair and walk your feet back to a plank position. Keeping your body in a straight line between the top of your head and your heels, bend your elbows and lower your body toward the seat. Pause, then push up through your palms to return to starting position. Repeat.", "Upper Body", "Chair");
 
@@ -175,7 +174,6 @@ var woodChopper = new Exercise("Wood Chopper", "Attach band to a fixed point at 
 var bicepsCurl = new Exercise("Biceps Curl", "Stand with feet shoulder-width apart with your feet placed over the middle of the band. Grab a handle in each hand, starting with your arms down at your sides. With palms facing in front of you, pull your arms toward your shoulders by bending at the elbow until you get a good bicep contraction. Slowly lower back down and repeat.", "Upper Body", "Resistance Band");
 
 var tricepsKickback = new Exercise("Triceps Kickback", "Kick back and relax. Just kidding! Stand in a forward lunge position with your right foot in front, positioned over the center of the band. Holding each end of the band, position your arms at your sides with palms facing behind you. Bend at the elbows (keeping them tucked by your sides) until your forearms are parallel to the floor. Next, press down the arms, pushing the band behind your body until the arms fully extend. Lower back down and repeat.", "Upper Body", "Resistance Band");
-
 
     // These exercises require free weights
 var hammerCurl = new Exercise("Hammer Curl", "Stand with the feet shoulder width apart, knees slightly bent and back straight. Hold a dumbbell in each hand with the palms facing in, towards each other and elbows straight. Keep your upper arms still as you bend the elbows to lift the weights from your sides up towards your shoulders. Be careful not to arch your back or swing the weights. Slowly return the weights back to the starting position.", "Upper Body", "Weights");
@@ -241,20 +239,20 @@ $(document).ready(function() {
       $(".exerciseList li:nth-child(5)").after("<p class='listBreak'>" + "Second Set:" + "</p>");
     }
 
-      $(".clickDesc").click(function() {
-        $(".timeDisplay").css("top", "7px");
-      });
+    $(".clickDesc").click(function() {
+      $(".timeDisplay").css("top", "7px");
+    });
 
     // changes page layout on form submission and ideally fades the form out as well
-      var numberReps = newWorkout.timeSelection();
-      var numberSetsText = newWorkout.setsText();
-      $.when($(".formBox").fadeOut(1000)).then(function() {
-        $(".list").fadeIn(1000);
-        $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
+    var numberReps = newWorkout.timeSelection();
+    var numberSetsText = newWorkout.setsText();
+    $.when($(".formBox").fadeOut(1000)).then(function() {
+      $(".list").fadeIn(1000);
+      $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
 
-        $(".col-md-8").append("<p><h3>Hey <span class= 'fancyName'>" + nameInput + "</span>,</h3></p><h3> Here's your workout plan!</h3></p><h3>Do exercise for <strong>20 seconds</strong> at high intensity, followed by <strong>10 seconds</strong> of rest.</h3><p><span class= 'highlight'>Highlighted exercises</span> require equipment!<p>For a " + timeInput + " minute workout follow this pattern:<br> <ul class= 'listBuddy'> <li class='instructions'>Perform each exercise in your first set " + numberReps + " times.</li>" + numberSetsText + "<center><div><span class='btn btn-timer' onclick=$('#showable').toggle()>START</span><div><br> <img class='img-responsive' id='showable' src='img/countdown-infinite.gif'></div></center>"
-        );
-      });
+      $(".col-md-8").append("<p><h3>Hey <span class= 'fancyName'>" + nameInput + "</span>,</h3></p><h3> Here's your workout plan!</h3></p><h3>Do exercise for <strong>20 seconds</strong> at high intensity, followed by <strong>10 seconds</strong> of rest.</h3><p><span class= 'highlight'>Highlighted exercises</span> require equipment!<p>For a " + timeInput + " minute workout follow this pattern:<br> <ul class= 'listBuddy'> <li class='instructions'>Perform each exercise in your first set " + numberReps + " times.</li>" + numberSetsText + "<center><div><span class='btn btn-timer' onclick=$('#showable').toggle()>START</span><div><br> <img class='img-responsive' id='showable' src='img/countdown-infinite.gif'></div></center>"
+      );
+    });
 
     var equipString = equipmentInput.join(", ");
 
