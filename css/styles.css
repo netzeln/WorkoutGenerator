@@ -120,6 +120,10 @@ body {
   height: 100%;
 }
 
+.exerciseList {
+  margin-bottom: 100px;
+}
+
 .formBox {
   width: 475px;
   background-color: #fff;
@@ -128,6 +132,7 @@ body {
   padding-top: 30px;
   margin-left: -50px;
   margin-top: 20px;
+  margin-bottom: 100px;
   -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
   -moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
   box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
@@ -278,6 +283,10 @@ li.instructions {
 .memberInfo {
   text-align: left;
   float: right;
+}
+
+.second.col-md-8 {
+  margin-bottom: 100px;
 }
 
 #showable{
