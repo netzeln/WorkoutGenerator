@@ -266,6 +266,9 @@ li {
   padding-left: 10px;
 }
 
+#showable{
+  display: none;
+}
 @media only screen and (max-width: 400px) {
   .jumbotron h1 {
     text-align: center;

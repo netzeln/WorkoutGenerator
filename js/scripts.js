@@ -85,6 +85,8 @@ Workout.prototype.setsText = function(){
   }
 }
 
+
+
 //Exercise Object Constructor for Pseudo Database
 function Exercise(nameExercise, descriptionExercise, bodyPart, neededEquipment){
   this.nameExercise = nameExercise;
@@ -100,7 +102,6 @@ var pushUpStandard = new Exercise("Standard Pushup", "Place arms below shoulders
 var squatStandard = new Exercise("Standard Squat", "Stand with feet shoulder width apart, lower your body like you're sitting into a chair, keeping your knees behind your toes. Return to standing.", "Lower Body", "none");
 
 var highKneeStandard = new Exercise("High Knee", "Alternate raising knees to hip height.", "Lower Body", "none");
-
 
 var highKneeFast = new Exercise ("Fast High Knee", "Run in place, raising knees to hip height, swinging arms.", "Cardio", "none");
 
@@ -125,8 +126,6 @@ var tricepDips = new Exercise("Tricep Dips", "Facing the ceiling, hands and feet
 var wallSit = new Exercise("Wall Sit", "Who needs a chair when there’s a wall? Slowly slide your back down a wall until the thighs are parallel to the ground. Make sure the knees are directly above the ankles and keep the back straight. Go for 60 seconds per set (or however long it takes to turn those legs to jelly). Need more fire? Add some bicep curls.", "Lower Body", "none");
 
 var superman = new Exercise("Superman", "Want some superpowers? Lie face down with arms and legs extended. Keeping the torso as still as possible, simultaneously raise the arms and legs to form a small curve in the body. Cape optional.", "Core", "none");
-
-var plankSide = new Exercise("Side Plank", "Lie on your side, in a straight line from head to feet, resting on your forearm. Your elbow should be directly under your shoulder. With your abdominals gently contracted, lift your hips off the floor, maintaining the line. Keep your hips square and your neck in line with your spine.", "Core", "none");
 
 var burpees = new Exercise("Burpees", "One of the most effective full-body exercises around, this one starts out in a low squat position with hands on the floor. Next, kick the feet back to a push-up position, complete one push-up, then immediately return the feet to the squat position. Leap up as high as possible before squatting and moving back into the push-up portion of the show.", "Cardio", "none");
 
@@ -226,19 +225,14 @@ $(document).ready(function() {
     for (var j = 0; j < timerCount; j++) {
       var newWorkoutList = newWorkout.exercisePusher();
       for (var i=0; i < newWorkoutList.length; i++) {
-        var randomId = Math.floor(Math.random() * 0x1000);
-        if(newWorkoutList[i].neededEquipment !== "none"){
-          $(".exerciseList").append("<li class='clickDesc equipment' data-toggle='collapse' data-target='#collapse" + randomId +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + randomId + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
-        } else {
-          $(".exerciseList").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + randomId +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + randomId + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
-        }
+        var randomId = Math.floor(Math.random() * 0x100);
+        $(".exerciseList").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + randomId +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + randomId + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
       }
     };
 
     var count = $(".clickDesc").length;
     if (count === 10) {
-      $(".exerciseList li:nth-child(5)").after("<p class='listBreak'>" + "Second Set:" + "</p>");
-      $(".container").css("margin-bottom", "200px")
+      $(".exerciseList li:nth-child(5n)").after("<p class='listBreak'>" + "Second Set:" + "</p>");
     }
 
       $(".clickDesc").click(function() {
@@ -251,7 +245,9 @@ $(document).ready(function() {
       $.when($(".formBox").fadeOut(1000)).then(function() {
         $(".list").fadeIn(1000);
         $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
-        $(".col-md-8").append("<p><h3>Hey <span class= 'fancyName'>" + nameInput + "</span>,<br> Here's your workout plan!</h3></p><br><h4>Do exercise for <strong>20 seconds</strong> at high intensity, followed <strong>10 seconds</strong> of rest.</h4><p><span class= 'highlight'>Highlighted exercises</span> require equipment!<p><br>For a " + timeInput + " minute workout follow this pattern:<br> <ul class= 'listBuddy'> <li class='instructions'>Perform each exercise in your first set " + numberReps + " times.</li>" + numberSetsText );
+
+        $(".col-md-8").append("<p><h3>Hey <span class= 'fancyName'>" + nameInput + "</span>,<br> Here's your workout plan!</h3></p><br><h4>Do exercise for <strong>20 seconds</strong> at high intensity, followed <strong>10 seconds</strong> of rest.</h4><p><span class= 'highlight'>Highlighted exercises</span> require equipment!<p><br>For a " + timeInput + " minute workout follow this pattern:<br> <ul class= 'listBuddy'> <li class='instructions'>Perform each exercise in your first set " + numberReps + " times.</li>" + numberSetsText + "<div><span class='btn btn-danger' onclick=$('#showable').toggle()>Start Timer</span><div><br> <img class='img-responsive' id='showable' src='img/countdown-infinite.gif'></div>"
+        );
       });
 
     var equipString = equipmentInput.join(", ");
@@ -280,6 +276,13 @@ $(document).ready(function() {
 
     //adds dynamic workout title
     $(".workoutTitle").text(finalMuscleInput + " :");
+
+    if ($(window).width() < 401) {
+      $(".gymCard").hide();
+    } else {
+      $(".gymCard").show();
+      $(".jumbotron h1").css('padding-right', '250px');
+    }
 
     $(".user-focus").text(finalMuscleInput);
     $(".user-equipment").text(equipString);
