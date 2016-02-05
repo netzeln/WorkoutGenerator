@@ -105,7 +105,7 @@ var highKneeStandard = new Exercise("High Knee", "Alternate raising knees to hip
 
 var highKneeFast = new Exercise ("Fast High Knee", "Run in place, raising knees to hip height, swinging arms.", "Cardio", "none");
 
-var plankStandard = new Exercise("Plank", "Place Arms slightly greater than shoulder width apart and toes on the ground. Hold position, keeping legs, torso and head aligned and core engaged.", "Core", "none");
+var plankStandard = new Exercise("Plank", "Place arms slightly greater than shoulder width apart and toes on the ground. Hold position, keeping legs, torso and head aligned and core engaged.", "Core", "none");
 
 var plankElbow = new Exercise("Elbow Plank", "Bend arms and place elbows on the ground beneath shoulders and place toes on the ground. Hold position, keeping legs, torso and head aligned and core engaged.", "Core", "none")
 
