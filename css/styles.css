@@ -285,6 +285,12 @@ li.instructions {
   float: right;
 }
 
+p.workoutSummary {
+  font-weight: normal;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
 .second.col-md-8 {
   margin-bottom: 100px;
 }

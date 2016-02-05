@@ -163,7 +163,7 @@ var chairDips= new Exercise("Chair Dips", "Facing the ceiling, hands holding sid
 
 var plankKneeCross = new Exercise("Plank Knee Cross", "Place both forearms on the seat of the chair and step your feet back into a plank position. Keeping your hips low and core tight, bring your right knee to the inside of your left arm. Pause, then return to start and repeat on the opposite leg, this time touching your left knee to the inside of your right arm.", "Core", "Chair");
 
-var quadricepsContractions = new Exercise("Quadriceps Contractions", "Sit on the edge of chair with your legs straight in front of you and your heels on the floor. Tighten your legs and hold.", "Lower Body", "Chair");
+var quadricepsContractions = new Exercise("Quad Contractions", "Sit on the edge of chair with your legs straight in front of you and your heels on the floor. Tighten your legs and hold.", "Lower Body", "Chair");
 
     // These exercises require a resistance band
 var squatFront = new Exercise ("Front Squat with Band", "Stand on band with feet slightly wider than shoulder width. Holding a handle in each hand, bring the top of the band over each shoulder. (If it's too long, secure band in place by crossing your arms at your chest.) Sit straight down, chest up, abs firm, pressing knees out over your toes.", "Lower Body", "Resistance Band");
