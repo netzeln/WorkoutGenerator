@@ -85,6 +85,8 @@ Workout.prototype.setsText = function(){
   }
 }
 
+
+
 //Exercise Object Constructor for Pseudo Database
 function Exercise(nameExercise, descriptionExercise, bodyPart, neededEquipment){
   this.nameExercise = nameExercise;
@@ -205,7 +207,7 @@ $(document).ready(function() {
       $.when($(".formBox").fadeOut(2000)).then(function() {
         $(".list").show();
         $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
-        $(".col-md-8").append("<h3>Hey " + nameInput + ",<br> Here's your workout plan!</h3> <p>**Peform each exercise for <strong>20-seconds at high intensity</strong>, followed by a <strong>10-second rest</strong>.**</p> <p>For a " + timeInput + " minute workout:<br> <ul> <li class='instructions'>Perform each exercise in your first set " + numberReps + " times.</li>" + numberSetsText + "<div><span class='btn btn-primary' onclick=$('#showable').toggle()>Button Here</span><br> <img class='img-responsive' id='showable' src='img/countdown-infinite.gif'></div>");
+        $(".col-md-8").append("<h3>Hey " + nameInput + ",<br> Here's your workout plan!</h3> <p>**Peform each exercise for <strong>20-seconds at high intensity</strong>, followed by a <strong>10-second rest</strong>.**</p> <p>For a " + timeInput + " minute workout:<br> <ul> <li class='instructions'>Perform each exercise in your first set " + numberReps + " times.</li>" + numberSetsText + "<div><span class='btn btn-danger' onclick=$('#showable').toggle()>Start Timer</span><div><br> <img class='img-responsive' id='showable' src='img/countdown-infinite.gif'></div>");
       });
 
     var equipString = equipmentInput.join(", ");
