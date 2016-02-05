@@ -95,32 +95,30 @@ function Exercise(nameExercise, descriptionExercise, bodyPart, neededEquipment){
 
 // This is our " pseudo- 'Database' of Exercises."
     // These exercises do not need any equipment
-var pushUpStandard = new Exercise("Standard Pushup", "Place arms below shoulders in plank postition, lower your body, keeping core engaged and body in a straight line, push back up to plank", "Upper Body", "none");
+var pushUpStandard = new Exercise("Standard Pushup", "Place arms below shoulders in plank postition, lower your body, keeping core engaged and body in a straight line, push back up to plank.", "Upper Body", "none");
 
-var squatStandard = new Exercise("Standard Squat", "Stand with feet shoulder width apart, lower your body like you're sitting into a chair, keeping your knees behind your toes. Return to standing", "Lower Body", "none");
+var squatStandard = new Exercise("Standard Squat", "Stand with feet shoulder width apart, lower your body like you're sitting into a chair, keeping your knees behind your toes. Return to standing.", "Lower Body", "none");
 
-var highKneeStandard = new Exercise("High Knee", "Alternate raising knees to hip height", "Lower Body", "none");
+var highKneeStandard = new Exercise("High Knee", "Alternate raising knees to hip height.", "Lower Body", "none");
 
 
-var highKneeFast = new Exercise ("Fast High Knee", "Run in place, raising knees to hip height, swinging arms", "Cardio", "none");
+var highKneeFast = new Exercise ("Fast High Knee", "Run in place, raising knees to hip height, swinging arms.", "Cardio", "none");
 
-var plankStandard = new Exercise("Plank", "Place Arms slightly greater than shoulder width apart and toes on the ground. Hold position, keeping legs, torso and head aligned and core engaged", "Core", "none");
+var plankStandard = new Exercise("Plank", "Place Arms slightly greater than shoulder width apart and toes on the ground. Hold position, keeping legs, torso and head aligned and core engaged.", "Core", "none");
 
-var plankElbow = new Exercise("Elbow Plank", "Bend arms and place elbows on the ground beneath shoulders and place toes on the ground. Hold position, keeping legs, torso and head aligned and core engaged", "Core", "none")
+var plankElbow = new Exercise("Elbow Plank", "Bend arms and place elbows on the ground beneath shoulders and place toes on the ground. Hold position, keeping legs, torso and head aligned and core engaged.", "Core", "none")
 
-var plankUpdown = new Exercise("Up-Downs", "Begin in Standard Plank position, lower yourself to Elbow Plank position, one arm at a time. Return to Standard Plank Position, one arm at a time. Repeat", "Upper Body", "none");
+var plankUpdown = new Exercise("Up-Downs", "Begin in Standard Plank position, lower yourself to Elbow Plank position, one arm at a time. Return to Standard Plank Position, one arm at a time. Repeat.", "Upper Body", "none");
 
-var jumpingJackStandard = new Exercise("Standard Jumping Jack", "Do a Jumping Jack. Repeat", "Cardio", "none");
+var jumpingJackStandard = new Exercise("Standard Jumping Jack", "Do a Jumping Jack. Repeat.", "Cardio", "none");
 
-var squatSplit = new Exercise("Split Squat", ".....description.....", "Lower Body", "none");
+var squatSplit = new Exercise("Split Squat", "Begin in a standing position. Jump into a split leg position, with one leg forward and one leg back, flexing the knees and lowering your hips slightly as you do so. As you descend, immediately reverse direction, standing back up and jumping, reversing the position of your legs. Repeat 5-10 times on each leg.", "Lower Body", "none");
 
-var pushUpWide = new Exercise("Wide Push Up", "Place arms in line with shoulders, slightly wider than shoulder width apart, do a pushup", "Upper Body", "none");
+var pushUpWide = new Exercise("Wide Push Up", "Place arms in line with shoulders, slightly wider than shoulder width apart, do a pushup.", "Upper Body", "none");
 
-var restTime = new Exercise("10 Seconds of Rest", "Stop what you're doing", "none", "none");
+var lineJump = new Exercise("Line Jumps", "Jump across a line and back, keep feet together.", "Cardio", "none");
 
-var lineJump = new Exercise("Line Jumps", "Jump across a line and back, keep feet together", "Cardio", "none");
-
-var crunchesStandard = new Exercise("Standard Crunches", "Do a sit-up", "Core", "none");
+var crunchesStandard = new Exercise("Standard Crunches", "Do a sit-up.", "Core", "none");
 
 var tricepDips = new Exercise("Tricep Dips", "Facing the ceiling, hands and feet flat on the ground (as if you were about to do a crab walk), extend one leg straight up into the air and dip by bending at the elbows. Alternate which leg is extended with each dip.", "Upper Body", "none");
 
@@ -132,11 +130,27 @@ var plankSide = new Exercise("Side Plank", "Lie on your side, in a straight line
 
 var burpees = new Exercise("Burpees", "One of the most effective full-body exercises around, this one starts out in a low squat position with hands on the floor. Next, kick the feet back to a push-up position, complete one push-up, then immediately return the feet to the squat position. Leap up as high as possible before squatting and moving back into the push-up portion of the show.", "Cardio", "none");
 
-var legCrunch = new Exercise("Raised Leg Crunches", "Lie on your back, raise straightened legs to 45-degrees, do a crunch", "Core", "none");
+var legCrunch = new Exercise("Raised Leg Crunches", "Lie on your back, raise straightened legs to 45-degrees, do a crunch.", "Core", "none");
 
 var fastPunches = new Exercise("Fast Punches", "Lower into a squat position. Quickly alternate forward punches, turning torso to extend reach.", "Cardio", "none");
 
-var squatJump = new Exercise("Squat Jump", "Perform a squat, at the top of the movement, Jump.  Alternate Split Squats for extra challenge", "Lower Body", "none");
+var squatJump = new Exercise("Squat Jump", "Perform a squat, at the top of the movement, Jump. Alternate Split Squats for extra challenge.", "Lower Body", "none");
+
+var curtsyLunges = new Exercise("Curtsy Lunges", "Stand with your feet hip-width apart, hands on your hips. Shift your weight to your right side and step your left leg behind your right leg so your legs are crossed. If you imagine a clock underneath you, your left toes should be at roughly 4 o’clock. Bend both knees, not letting them come over your toes, and sink into the lunge, keeping your chest upright. Engage your quads and squeeze your glutes as you drive off your left leg, standing up and bringing it back to the starting position. Repeat on the other side, alternating sides for one minute.", "Lower Body", "none");
+
+var squatPistol = new Exercise("Pistol Squat", "There may be no gun permit necessary for this one, but it’s still no joke. Stand holding the arms straight out in front of the body, and raise the right leg, flexing the right ankle and pushing the hips back. Then lower the body while keeping the right leg raised. Hold (have fun with that), then return to standing.", "Lower Body", "none");
+
+var pushUpDiamond = new Exercise("Diamond Push Ups", "Jay-Z would approve. These push-ups get pimped out with a diamond-shaped hand position (situate them so that the thumbs and index fingers touch). This hand readjustment will give those triceps some extra (burning) love.", "Upper Body", "none");
+
+var bicycleKick = new Exercise("Bicycle Kick", "Lie down with knees bent and hands behind the head. With the knees in toward the chest, bring the right elbow towards the left knee as the right leg straightens. Continue alternating sides (like you’re pedaling!).", "Core", "none");
+
+var pushUpHandstand = new Exercise("Handstand Push Up", "Get set in a headstand position against a wall and bend the elbows at a 90-degree angle, doing an upside down push-up (so the head moves toward the floor and the legs remain against the wall). First timer? Grab a friend to spot you—safety first!", "Upper Body", "none");
+
+var pushUpDolphin = new Exercise("Dolphin Push Up", "Start out in dolphin pose (think: down-dog with elbows on the floor). Lean forward, lowering the shoulders until the head is over the hands. Pull up the arms and return to the starting position. (No ocean necessary.)", "Upper Body", "none");
+
+var buttKick = new Exercise("Butt Kick", "These will literally kick your butt—in a good way. Jog in place while kicking your heels back towards your glutes. Make sure the movement is being driven from your hamstrings (not just your feet kicking up dust). Keep it up for a minute straight while picking up the pace!", "Cardio", "none");
+
+var mountainClimber = new Exercise("Mountain Climber", "We’re not going up any real mountains, but these are a close second. Start down on your hands and knees, and bring the right foot forward to the chest while the left leg remains straight. Engaging the core, quickly switch legs.", "Cardio", "none");
 
     // These exercises require a chair
 var pushUpIncline = new Exercise("Incline Push-Ups", "Place both palms on the seat of the chair and walk your feet back to a plank position. Keeping your body in a straight line between the top of your head and your heels, bend your elbows and lower your body toward the seat. Pause, then push up through your palms to return to starting position. Repeat.", "Upper Body", "Chair");
@@ -145,29 +159,41 @@ var seatTaps = new Exercise("Seat Taps", "Stand facing the front of the chair. S
 
 var seatedKneeLifts = new Exercise("Seated Knee Lifts", "Sit on edge of chair, knees bent, feet flat. Grasp sides of chair, lean back slightly. Pull knees toward chest as you crunch upper body forward using abs, not arms. Lower feet almost to floor, but don't let them touch until the end of the set.", "Core", "Chair");
 
-var chairDips= new Exercise("Chair Dips", "Facing the ceiling, hands holding sides of the chair and feet flat on the ground, dip by bending at the elbows. .", "Upper Body", "Chair");
+var chairDips= new Exercise("Chair Dips", "Facing the ceiling, hands holding sides of the chair and feet flat on the ground, dip by bending at the elbows.", "Upper Body", "Chair");
+
+var plankKneeCross = new Exercise("Plank Knee Cross", "Place both forearms on the seat of the chair and step your feet back into a plank position. Keeping your hips low and core tight, bring your right knee to the inside of your left arm. Pause, then return to start and repeat on the opposite leg, this time touching your left knee to the inside of your right arm.", "Core", "Chair");
+
+var quadricepsContractions = new Exercise("Quadriceps Contractions", "Sit on the edge of chair with your legs straight in front of you and your heels on the floor. Tighten your legs and hold.", "Lower Body", "Chair");
 
     // These exercises require a resistance band
-var squatFront = new Exercise ("Front Squat with Band", "Stand on band with feet slightly wider than shoulder width. Holding a handle in each hand, bring the top of the band over each shoulder. (If it's too long, secure band in place by crossing your arms at your chest.) Sit straight down, chest up, abs firm, pressing knees out over your toes", "Lower Body", "Resistance Band");
+var squatFront = new Exercise ("Front Squat with Band", "Stand on band with feet slightly wider than shoulder width. Holding a handle in each hand, bring the top of the band over each shoulder. (If it's too long, secure band in place by crossing your arms at your chest.) Sit straight down, chest up, abs firm, pressing knees out over your toes.", "Lower Body", "Resistance Band");
 
 var lateralBandWalk = new Exercise("Lateral Band Walk", "Don’t sidestep these side steps! Step into a loop band or tie a therapy band around the lower legs, just above both ankles. Place feet shoulder-width apart to create tension on the band. From a half-squat position, shift your weight to the left side, stepping sideways with the right leg. Move the standing leg slightly in, but keep the band taut. Take 8 to 10 steps before heading back the other way.", "Lower Body", "Resistance Band");
 
-var woodChopper = new Exercise("Wood Chopper", "Attach band to a fixed point at chest level. Stand perpendicular to the point, extend arms outward to hold the end of the band. Keeping arms straight, twist torso, stretching the band.", "Upper Body", "Resistance Band");
+var woodChopper = new Exercise("Wood Chopper", "Attach band to a fixed point at chest level. Stand perpendicular to the point, extend arms outward to hold the end of the band. Keeping arms straight, twist torso, stretching the band.", "Core", "Resistance Band");
+
+var bicepsCurl = new Exercise("Biceps Curl", "Stand with feet shoulder-width apart with your feet placed over the middle of the band. Grab a handle in each hand, starting with your arms down at your sides. With palms facing in front of you, pull your arms toward your shoulders by bending at the elbow until you get a good bicep contraction. Slowly lower back down and repeat.", "Upper Body", "Resistance Band");
+
+var tricepsKickback = new Exercise("Triceps Kickback", "Kick back and relax. Just kidding! Stand in a forward lunge position with your right foot in front, positioned over the center of the band. Holding each end of the band, position your arms at your sides with palms facing behind you. Bend at the elbows (keeping them tucked by your sides) until your forearms are parallel to the floor. Next, press down the arms, pushing the band behind your body until the arms fully extend. Lower back down and repeat.", "Upper Body", "Resistance Band");
 
 
     // These exercises require free weights
 var hammerCurl = new Exercise("Hammer Curl", "Stand with the feet shoulder width apart, knees slightly bent and back straight. Hold a dumbbell in each hand with the palms facing in, towards each other and elbows straight. Keep your upper arms still as you bend the elbows to lift the weights from your sides up towards your shoulders. Be careful not to arch your back or swing the weights. Slowly return the weights back to the starting position.", "Upper Body", "Weights");
 
-var squatPress = new Exercise("Squat Press", "Holding weights at shoulder height, perform a squat. At top of squat, extend arms upward with weights", "Lower Body", "Weights")
+var squatPress = new Exercise("Squat Press", "Holding weights at shoulder height, perform a squat. At top of squat, extend arms upward with weights.", "Lower Body", "Weights")
 
 var russianTwist = new Exercise("Russian Twist", "Sit on the floor with your feet in the air and knees bent, holding a dumbbell in both hands in front of your sternum. Keeping your core braced and arms straight, rotate to one side. Then twist the other way. Return to the start again to complete one rep.", "Core", "Weights");
 
-var equipmentExercises = [pushUpIncline, hammerCurl, squatFront, lateralBandWalk, seatedKneeLifts, russianTwist, seatTaps, woodChopper, squatPress, chairDips];
+var getUpSitUp = new Exercise("Get Up Sit Up", "Lie on your back on the floor, squeezing a dumbbell between your feet and holding another one over your chest. Keeping the tension in your legs, perform a situp, moving the weight directly overhead.", "Core", "Weights");
 
-var upperBody = [pushUpStandard, plankUpdown, pushUpWide, tricepDips];
-var lowerBody = [squatStandard, squatSplit, highKneeStandard, wallSit, squatJump];
-var core = [plankStandard, plankElbow, crunchesStandard, superman, plankSide, legCrunch];
-var cardio = [highKneeFast, jumpingJackStandard, lineJump, burpees, fastPunches];
+var renegadeRow = new Exercise("Renegade Row", "With a dumbbell in each hand, get into pushup position with your feet wide. Shift your weight to your left side and row the right-hand dumbbell to your side. Repeat on the opposite side.", "Upper Body", "Weights");
+
+var equipmentExercises = [pushUpIncline, hammerCurl, squatFront, lateralBandWalk, seatedKneeLifts, russianTwist, seatTaps, woodChopper, squatPress, chairDips, getUpSitUp, renegadeRow, plankKneeCross, quadricepsContractions, bicepsCurl, tricepsKickback];
+
+var upperBody = [pushUpStandard, plankUpdown, pushUpWide, tricepDips, pushUpDiamond, pushUpHandstand, pushUpDiamond];
+var lowerBody = [squatStandard, squatSplit, highKneeStandard, wallSit, squatJump, curtsyLunges, squatPistol];
+var core = [plankStandard, plankElbow, crunchesStandard, superman, plankSide, legCrunch, bicycleKick];
+var cardio = [highKneeFast, jumpingJackStandard, lineJump, burpees, fastPunches, buttKick, mountainClimber];
 
 var exerciseCategories = [upperBody, cardio, lowerBody, core, cardio];
 var upperBodyFocus = [upperBody, cardio, upperBody, cardio, upperBody];
@@ -222,8 +248,8 @@ $(document).ready(function() {
     // changes page layout on form submission and ideally fades the form out as well
       var numberReps = newWorkout.timeSelection();
       var numberSetsText = newWorkout.setsText();
-      $.when($(".formBox").fadeOut(2000)).then(function() {
-        $(".list").show();
+      $.when($(".formBox").fadeOut(1000)).then(function() {
+        $(".list").fadeIn(1000);
         $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
         $(".col-md-8").append("<h3>Hey " + nameInput + ",<br> Here's your workout plan!</h3> <p>**Do exercise for <strong>:20 at high intensity</strong>, followed by a <strong>:10 rest</strong>.**</p> <p>Highlighted Exercises require equipment.<p>For a " + timeInput + " minute workout follow this pattern:<br> <ul> <li class='instructions'>Perform each exercise in your first set " + numberReps + " times.</li>" + numberSetsText );
       });
@@ -232,7 +258,7 @@ $(document).ready(function() {
 
     // removes gymCard on mobile view
     $(window).on('resize', function() {
-      if ($(window).width() < 401) {
+      if ($(window).width() < 1024) {
         $(".gymCard").hide();
         $(".jumbotron h1").css('padding-right', '0px');
       } else {

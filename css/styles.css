@@ -267,3 +267,21 @@ li {
     margin-bottom: 120px;
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  .workoutTitle {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 991px) {
+  .col-md-8 {
+    margin-left: 20% !important;
+  }
+  .list {
+    margin-left: 30%;
+  }
+  .formBox {
+    margin-left: 20%;
+  }
+}
