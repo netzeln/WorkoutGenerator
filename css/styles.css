@@ -59,7 +59,7 @@ body {
   padding-right: 10px;
   float:left;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .gymCard p {
@@ -126,13 +126,22 @@ body {
   width: 475px;
   background-color: #fff;
   border-radius: 10px;
-  padding: 20px;
+  padding: 40px;
   padding-top: 20px;
-  margin-left: -50px;
-  margin-top: 60px;
+  margin-left: 25px;
+  margin-top: 25px;
   -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
   -moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
   box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+}
+
+.col-md-8 h3{
+  font-size: 24px;
+}
+
+.col-md-8 .fancyName {
+  font-family: 'Satisfy', cursive;
+  font-size: 24px;
 }
 
 .col-md-2 {
@@ -162,7 +171,6 @@ h4 {
 .workoutTitle {
   font-family: 'Fredoka One', cursive;
   font-size: 24px;
-  padding-bottom: 20px;
   color: #000;
   font-weight: lighter;
   margin-left: 40px;
@@ -201,6 +209,11 @@ li.instructions {
   margin-bottom: 4px;
   max-width: 500px;
   list-style-type:circle;
+  list-style-position:inside
+}
+
+.listBuddy {
+  padding-left:0;
 }
 
 li.equipment {
@@ -211,6 +224,12 @@ li.equipment {
   max-width: 250px;
   list-style-type: none;
 }
+
+.highlight {
+  background-color: #ccc;
+  display: inline;
+}
+
 
 li {
   background-color: #fff;
@@ -263,7 +282,7 @@ li {
   .col-md-8 {
     width: 300px;
     margin-right: 0;
-    margin-left: 40px !important;
+    margin-left: 140px !important;
     margin-bottom: 120px;
   }
 }
