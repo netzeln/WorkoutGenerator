@@ -250,7 +250,7 @@ $(document).ready(function() {
         $(".list").fadeIn(1000);
         $(".col-md-4.second").addClass("col-md-8").removeClass("col-md-4");
 
-        $(".col-md-8").append("<p><h3>Hey <span class= 'fancyName'>" + nameInput + "</span>,<br> Here's your workout plan!</h3></p><br><h4>Do exercise for <strong>20 seconds</strong> at high intensity, followed <strong>10 seconds</strong> of rest.</h4><p><span class= 'highlight'>Highlighted exercises</span> require equipment!<p><br>For a " + timeInput + " minute workout follow this pattern:<br> <ul class= 'listBuddy'> <li class='instructions'>Perform each exercise in your first set " + numberReps + " times.</li>" + numberSetsText + "<div><span class='btn btn-danger' onclick=$('#showable').toggle()>Start Timer</span><div><br> <img class='img-responsive' id='showable' src='img/countdown-infinite.gif'></div>"
+        $(".col-md-8").append("<p><h3>Hey <span class= 'fancyName'>" + nameInput + "</span>,</h3></p><h3> Here's your workout plan!</h3></p><h3>Do exercise for <strong>20 seconds</strong> at high intensity, followed by <strong>10 seconds</strong> of rest.</h3><p><span class= 'highlight'>Highlighted exercises</span> require equipment!<p>For a " + timeInput + " minute workout follow this pattern:<br> <ul class= 'listBuddy'> <li class='instructions'>Perform each exercise in your first set " + numberReps + " times.</li>" + numberSetsText + "<center><div><span class='btn btn-timer' onclick=$('#showable').toggle()>START</span><div><br> <img class='img-responsive' id='showable' src='img/countdown-infinite.gif'></div></center>"
         );
       });
 

@@ -1,5 +1,40 @@
-html {
-  height: 100%;
+@media only screen and (max-width: 400px) {
+  .jumbotron h1 {
+    text-align: center;
+    font-size: 86px;
+  }
+  .jumbotron {
+    padding: 30px;
+  }
+
+  .jumbotronBottom {
+    position: fixed;
+    height: 100px;
+  }
+  .col-md-8 {
+    width: 300px;
+    margin-right: 0;
+    margin-left: 140px !important;
+    margin-bottom: 120px;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 991px) {
+  .col-md-8 {
+    margin-left: 20% !important;
+  }
+  .list {
+    margin-left: 30%;
+  }
+  .formBox {
+    margin-left: 20%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .workoutTitle {
+    font-size: 20px;
+  }
 }
 
 body {
@@ -14,36 +49,98 @@ body {
   background-attachment: fixed;
 }
 
+.btn-custom {
+  text-align: center;
+  margin-top: 35px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 24px;
+  background-color: #ff4a33;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.btn-timer {
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 24px;
+  background-color: #ff4a33;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 6px;
+}
+
+.clickDesc {
+  font-weight: bold;
+  font-size: 16px;
+  vertical-align: middle;
+  position: relative;
+  -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  -moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+}
+
+.clickDesc:hover {
+  color: #35C47E;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.col-md-8 {
+  text-align: center;
+  width: 575px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  padding-top: 20px;
+  margin-left: 25px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  -moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+}
+
+.col-md-8 .fancyName {
+  font-family: 'Satisfy', cursive;
+  font-size: 24px;
+}
+
+.collapse {
+  display: none;
+}
+
 .container {
   height: 100%;
 }
 
-.jumbotron {
-  color: #fff;
-  padding: 10px;
-  background-color: #1a1a1a;
+.formBox {
+  width: 475px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 50px;
+  padding-top: 30px;
+  margin-left: -50px;
+  margin-top: 20px;
+  -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  -moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
 }
 
-.jumbotron .glyphicon-time {
-  color: #ff4a33;
-  font-size: 72px;
-  font-weight: bolder;
+.form-control {
+  margin-bottom: 20px;
 }
 
-.jumbotron a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.jumbotron h1 {
-  font-size: 128px;
-  font-family: 'Fredoka One', cursive;
-  text-shadow: 2px 2px #666666;
-}
-
-
-.jumbotron .glyphicon:hover {
-  color: #E59E29;
+.glyphicon-user {
+  font-size: 24px;
+  color: #666666;
+  float: left;
 }
 
 .gymCard {
@@ -62,27 +159,56 @@ body {
   margin-left: 20px;
 }
 
-.gymCard p {
-  color: #000;
-  font-size: 14px;
-  line-height: 6px;
-}
-
 .gymCard h3 {
   font-family: 'Satisfy', cursive;
   margin-top: 5px;
   color: #000;
 }
 
-.memberInfo {
-  text-align: left;
-  float: right;
+.gymCard p {
+  color: #000;
+  font-size: 14px;
+  line-height: 6px;
 }
 
-.glyphicon-user {
-  font-size: 24px;
-  color: #666666;
-  float: left;
+h4 {
+  margin-bottom: 30px;
+}
+
+.highlight {
+  background-color: #ccc;
+  display: inline;
+}
+
+html {
+  height: 100%;
+}
+
+.jumbotron {
+  color: #fff;
+  padding: 10px;
+  background-color: #1a1a1a;
+}
+
+.jumbotron a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.jumbotron h1 {
+  font-size: 128px;
+  font-family: 'Fredoka One', cursive;
+  text-shadow: 2px 2px #666666;
+}
+
+.jumbotron .glyphicon:hover {
+  color: #E59E29;
+}
+
+.jumbotron .glyphicon-time {
+  color: #ff4a33;
+  font-size: 72px;
+  font-weight: bolder;
 }
 
 .jumbotronBottom {
@@ -105,101 +231,22 @@ body {
   letter-spacing: 0px;
 }
 
-.formBox {
-  width: 475px;
+li {
   background-color: #fff;
-  border-radius: 10px;
-  padding: 50px;
-  padding-top: 30px;
-  margin-left: -50px;
-  margin-top: 20px;
-  -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
-  -moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
-  box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
+  border-radius: 26px;
+  padding: 18px;
+  margin-bottom: 10px;
+  max-width: 250px;
+  list-style-type: none;
 }
 
-.form-control {
-  margin-bottom: 20px;
-}
-
-.col-md-8 {
-  width: 475px;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 40px;
-  padding-top: 20px;
-  margin-left: 25px;
-  margin-top: 25px;
-  -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
-  -moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
-  box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
-}
-
-.col-md-8 h3{
-  font-size: 24px;
-}
-
-.col-md-8 .fancyName {
-  font-family: 'Satisfy', cursive;
-  font-size: 24px;
-}
-
-.col-md-2 {
-  background-color: yellow;
-}
-
-h4 {
-  margin-bottom: 30px;
-}
-
-.btn-custom {
-  text-align: center;
-  margin-top: 35px;
-  padding: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-  border-radius: 24px;
-  background-color: #ff4a33;
-  color: #fff;
-}
-
-.list {
-  display: none;
-  margin-right: 30px;
-}
-
-.workoutTitle {
-  font-family: 'Fredoka One', cursive;
-  font-size: 24px;
-  color: #000;
-  font-weight: lighter;
-  margin-left: 40px;
-}
-
-.collapse {
-  display: none;
-}
-
-.clickDesc {
-  font-weight: bold;
-  font-size: 16px;
-  vertical-align: middle;
-  position: relative;
-  -webkit-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
-  -moz-box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
-  box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.56);
-}
-
-.clickDesc:hover {
-  color: #35C47E;
-  font-weight: bolder;
-  cursor: pointer;
-}
-
-.workoutSummary {
-  padding-top: 30px;
-  font-weight: normal;
-  font-size: 14px;
+li.equipment {
+  background-color: #ccc;
+  border-radius: 26px;
+  padding: 18px;
+  margin-bottom: 10px;
+  max-width: 250px;
+  list-style-type: none;
 }
 
 li.instructions {
@@ -212,32 +259,29 @@ li.instructions {
   list-style-position:inside
 }
 
+.list {
+  display: none;
+  margin-right: 30px;
+}
+
+.listBreak {
+  font-weight: bold;
+  font-family: 'Fredoka One', cursive;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
 .listBuddy {
   padding-left:0;
 }
 
-li.equipment {
-  background-color: #ccc;
-  border-radius: 26px;
-  padding: 18px;
-  margin-bottom: 10px;
-  max-width: 250px;
-  list-style-type: none;
+.memberInfo {
+  text-align: left;
+  float: right;
 }
 
-.highlight {
-  background-color: #ccc;
-  display: inline;
-}
-
-
-li {
-  background-color: #fff;
-  border-radius: 26px;
-  padding: 18px;
-  margin-bottom: 10px;
-  max-width: 250px;
-  list-style-type: none;
+#showable{
+  display: none;
 }
 
 .timeDisplay {
@@ -259,51 +303,10 @@ li {
   margin-top: 27%;
 }
 
-.listBreak {
-  font-weight: bold;
-  font-family: 'Fredoka One';
-  font-size: 18px;
-  padding-left: 10px;
-}
-
-#showable{
-  display: none;
-}
-@media only screen and (max-width: 400px) {
-  .jumbotron h1 {
-    text-align: center;
-    font-size: 86px;
-  }
-  .jumbotron {
-    padding: 30px;
-  }
-
-  .jumbotronBottom {
-    position: fixed;
-    height: 100px;
-  }
-  .col-md-8 {
-    width: 300px;
-    margin-right: 0;
-    margin-left: 140px !important;
-    margin-bottom: 120px;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .workoutTitle {
-    font-size: 20px;
-  }
-}
-
-@media only screen and (min-width: 401px) and (max-width: 991px) {
-  .col-md-8 {
-    margin-left: 20% !important;
-  }
-  .list {
-    margin-left: 30%;
-  }
-  .formBox {
-    margin-left: 20%;
-  }
+.workoutTitle {
+  font-family: 'Fredoka One', cursive;
+  font-size: 24px;
+  color: #000;
+  font-weight: lighter;
+  margin-left: 40px;
 }
