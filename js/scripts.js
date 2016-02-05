@@ -191,7 +191,7 @@ var equipmentExercises = [pushUpIncline, hammerCurl, squatFront, lateralBandWalk
 
 var upperBody = [pushUpStandard, plankUpdown, pushUpWide, tricepDips, pushUpDiamond, pushUpHandstand, pushUpDiamond];
 var lowerBody = [squatStandard, squatSplit, highKneeStandard, wallSit, squatJump, curtsyLunges, squatPistol];
-var core = [plankStandard, plankElbow, crunchesStandard, superman, plankSide, legCrunch, bicycleKick];
+var core = [plankStandard, plankElbow, crunchesStandard, superman, legCrunch, bicycleKick];
 var cardio = [highKneeFast, jumpingJackStandard, lineJump, burpees, fastPunches, buttKick, mountainClimber];
 
 var exerciseCategories = [upperBody, cardio, lowerBody, core, cardio];
@@ -226,13 +226,17 @@ $(document).ready(function() {
       var newWorkoutList = newWorkout.exercisePusher();
       for (var i=0; i < newWorkoutList.length; i++) {
         var randomId = Math.floor(Math.random() * 0x100);
-        $(".exerciseList").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + randomId +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + randomId + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
+        if(newWorkoutList[i].neededEquipment !== "none"){
+          $(".exerciseList").append("<li class='clickDesc equipment' data-toggle='collapse' data-target='#collapse" + randomId +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + randomId + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
+        } else {
+          $(".exerciseList").append("<li class='clickDesc' data-toggle='collapse' data-target='#collapse" + randomId +"'>" + newWorkoutList[i].nameExercise + "<span class='timeDisplay'>" + "<p>" + "20s" + "</p>" + "</span>" + "<div class='collapse' id='collapse" + randomId + "'>" + "<p class='workoutSummary'>" +  newWorkoutList[i].descriptionExercise + "</p>" + "</div>" + "</li>");
+        }
       }
     };
 
     var count = $(".clickDesc").length;
     if (count === 10) {
-      $(".exerciseList li:nth-child(5n)").after("<p class='listBreak'>" + "Second Set:" + "</p>");
+      $(".exerciseList li:nth-child(5)").after("<p class='listBreak'>" + "Second Set:" + "</p>");
     }
 
       $(".clickDesc").click(function() {
