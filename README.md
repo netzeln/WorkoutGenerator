@@ -10,7 +10,7 @@ _This website generates an interval workout based on user inputs.  The user sele
 
 ## Setup/Installation Requirements
 
-* _Run the app on GitHub Pages [here] ()_
+* _Run the app on GitHub Pages [here] (http://netzeln.github.io/WorkoutGenerator/)_
 * _Check out our repository here: (https://github.com/netzeln/WorkoutGenerator)_
 
 
