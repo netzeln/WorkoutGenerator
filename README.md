@@ -1,6 +1,6 @@
 # _Intensity Interval Workout Generator_
 
-#### _Generates a Interval Workout based on user preferences, {2-1-2016}_
+#### _Generates a Interval Workout based on user preferences, February, 2016_
 
 #### By _**Nic Netzel, Torrence Stratton, Molly Curtin, Jared Beckler**_
 
@@ -10,24 +10,25 @@ _This website generates an interval workout based on user inputs.  The user sele
 
 ## Setup/Installation Requirements
 
-* _Product should be a Website available -here-.
-* _ or clone our github repository.
+* _Run the app on GitHub Pages [here] ()_
+* _Check out our repository here: (https://github.com/netzeln/WorkoutGenerator)_
 
 
 ## Known Bugs
 
-_Currently, short of refreshing the page (and thus erasing the workout), there is no way to "Reset" the timer once the .gif loads._
+* _Currently, short of refreshing the page (and thus erasing the workout), there is no way to "Reset" the timer once the .gif loads._
+* _Tablet viewpoint could be optimized for a better user experience._
 
 ## Support and contact details
 
-_If you have ideas or suggestions please contact us. Feel free to adapt or add features. .}_
+_If you have ideas or suggestions please contact us. Feel free to adapt or add features._
 
 ## Technologies Used
 
-_HTML, CSS, Bootstrap, Javascript, photoshop, google fonts_
+_HTML, CSS, Bootstrap, Javascript, jQuery, photoshop, google fonts_
 
 ### License
 
-*{tbd, though Nic is in favor of the freest one}*
+**This software is licensed under the MIT license.**
 
 Copyright (c) 2016 **_{Jared Beckler, Molly Curtin, Nic Netzel, Torrence Stratton}_**
