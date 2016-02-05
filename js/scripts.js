@@ -236,6 +236,11 @@ $(document).ready(function() {
       }
     };
 
+    //stops multiple items from expanding simultaneouslys
+    $(".clickDesc").click(function() {
+          $(".clickDesc").find('.collapse.in').collapse('hide');
+    });
+
     var count = $(".clickDesc").length;
     if (count === 10) {
       $(".exerciseList li:nth-child(5)").after("<p class='listBreak'>" + "Second Set:" + "</p>");
