@@ -25,7 +25,7 @@ _If you have ideas or suggestions please contact us. Feel free to adapt or add f
 
 ## Technologies Used
 
-_HTML, CSS, Bootstrap, Javascript, jQuery, photoshop, google fonts_
+_HTML, CSS, Bootstrap, Javascript, jQuery, Photoshop, Google Fonts_
 
 ### License
 
